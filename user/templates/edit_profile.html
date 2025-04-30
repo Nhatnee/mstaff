@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chỉnh sửa hồ sơ nhân sự</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #e9ecef);
+      color: #343a40;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 720px;
+      background: #ffffff;
+      margin: auto;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 35px;
+      color: #2c3e50;
+      font-weight: 600;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #495057;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ced4da;
+      border-radius: 8px;
+      font-size: 15px;
+      background-color: #fdfdfd;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 6px rgba(0, 123, 255, 0.2);
+      background-color: #fff;
+      outline: none;
+    }
+
+    input:disabled {
+      background-color: #e9ecef;
+      cursor: not-allowed;
+      color: #6c757d;
+    }
+
+    small {
+      color: #6c757d;
+    }
+
+    .error {
+      color: #dc3545;
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    button {
+      padding: 12px 28px;
+      font-size: 15px;
+      border: none;
+      border-radius: 8px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    .back-link {
+      text-decoration: none;
+      background-color: #6c757d;
+      padding: 12px 28px;
+      border-radius: 8px;
+      color: white;
+      font-weight: 500;
+      transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    .back-link:hover {
+      background-color: #5a6268;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 576px) {
+      .container {
+        padding: 25px;
+      }
+
+      .button-group {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>📝 Chỉnh sửa hồ sơ nhân sự</h2>
+    <form method="POST">
+      {% csrf_token %}
+      {% for field in form %}
+        <div class="form-group">
+          {{ field.label_tag }}
+          {{ field }}
+          {% if field.help_text %}
+            <small>{{ field.help_text }}</small>
+          {% endif %}
+          {% for error in field.errors %}
+            <div class="error">{{ error }}</div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+      <div class="button-group">
+        <button type="submit">💾 Lưu thay đổi</button>
+        <a href="{% url 'home' %}" class="back-link">← Quay lại</a>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Disable the salary level input field
+    document.addEventListener('DOMContentLoaded', () => {
+      const salaryField = document.querySelector('input[name="salary_level"]');
+      if (salaryField) {
+        salaryField.disabled = true;
+        salaryField.title = "Bậc lương không thể chỉnh sửa";
+      }
+    });
+  </script>
+</body>
+</html>

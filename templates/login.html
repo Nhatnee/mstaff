@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Đăng nhập - m_staff</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(to bottom right, #0d0d0d, #282727, #444444);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login-box {
+      background: rgba(30, 30, 30, 0.25);
+      border-radius: 20px;
+      padding: 72px 36px; /* tăng chiều cao */
+      width: 100%;
+      max-width: 420px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.06),
+                  -3px -3px 20px rgba(160, 160, 160, 0.9);
+      outline: 3px solid rgba(255, 255, 255, 0.2);
+      color: #f0f0f0;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .login-box h2 {
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 6px;
+      color: #ffffff;
+    }
+
+    .login-box p {
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 36px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      color: #ddd;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 28px; /* tăng spacing giữa các input */
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #eee;
+      font-size: 14px;
+      transition: border-color 0.3s, background-color 0.3s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #a175ff;
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .btn-login {
+      width: 100%;
+      background-color: #a175ff;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 20px; /* tăng khoảng cách so với input */
+    }
+
+    .btn-login:hover {
+      background-color: #8e5eff;
+    }
+
+    .signup {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    .signup a {
+      color: #a175ff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Đăng nhập hệ thống</h2>
+    <p>Chào mừng bạn quay lại!</p>
+
+    {% if error %}
+      <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+
+    <form method="POST">
+      {% csrf_token %}
+      <label for="username">Tên đăng nhập</label>
+      <input type="text" name="username" id="username" placeholder="Nhập tên đăng nhập" required>
+
+      <label for="password">Mật khẩu</label>
+      <input type="password" name="password" id="password" placeholder="Nhập mật khẩu" required>
+
+      <button type="submit" class="btn-login">Đăng nhập</button>
+    </form>
+  </div>
+</body>
+</html>

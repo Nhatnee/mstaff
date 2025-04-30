@@ -1,0 +1,446 @@
+{% load static %}
+{% load humanize %}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bảng Điều Khiển Nhân Sự</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(45deg, #f3f4f7, #cfd8dc);
+      min-height: 100vh;
+      color: #333;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar h1 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin: 0;
+    }
+
+    .logout {
+      background-color: #e67e22;
+      border: none;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .logout:hover {
+      background-color: #d35400;
+      transform: translateY(-4px);
+    }
+
+    .main-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 3rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .left-column {
+  flex: 0.8; /* 👉 Cột trái nhỏ hơn */
+}
+
+.middle-column {
+  flex: 1.2; /* 👉 Cột giữa giữ vừa phải */
+}
+
+.right-column {
+  flex: 2; /* 👉 Cột thu nhập rộng hơn */
+}
+
+.left-column,
+.middle-column,
+.right-column {
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+    .card a {
+      text-decoration: none !important;
+      color: inherit;
+    }
+    a {
+      text-decoration: none;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      border: 2px solid #f39c12;
+      border-radius: 15px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      background-color: #f1c40f;
+      border-color: #e67e22;
+    }
+
+    .card h2 {
+      font-size: 1.15rem;
+      margin: 0;
+      font-weight: 600;
+      color: #34495e;
+      line-height: 1.4;
+    }
+
+    .large-card {
+      width: 100%;
+      padding: 2rem 1.5rem;
+      font-size: 1rem;
+      min-height: 325px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.9);
+      border: 2px solid #f39c12;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(8px);
+      padding-top: 0.5rem !important;
+    }
+
+    .large-card:hover {
+      transform: none;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-color: #f39c12;
+      cursor: default;
+    }
+
+    #salaryPieChart {
+      max-width: 100%;
+      max-height: 200px;
+    }
+    .large-card h2 {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+    .announcement-list {
+      max-height: 150px;
+      overflow-y: auto;
+      width: 100%;
+      padding: 0 1rem;
+    }
+
+    .announcement-item {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    .announcement-item:last-child {
+      border-bottom: none;
+    }
+
+    .announcement-item h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.25rem;
+  color: #34495e;
+}
+.announcement-card-box {
+  padding-top: 1rem !important; /* giảm phần đẩy xuống */
+  padding-bottom: 1.5rem;
+}
+.announcement-content {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.25rem;
+}
+
+.announcement-meta {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+}
+
+    .no-announcements {
+      text-align: center;
+      padding: 1rem;
+      color: #7f8c8d;
+    }
+
+    .kpi-section {
+      width: 100%;
+      margin-top: 2rem;
+    }
+
+    .kpi-section h2 {
+      font-size: 1.5rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .kpi-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .kpi-table th,
+    .kpi-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .kpi-table th {
+      background-color: #f39c12;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .kpi-table tr:hover {
+      background-color: rgba(243, 156, 18, 0.1);
+    }
+
+    .no-kpi {
+      text-align: center;
+      padding: 2rem;
+      color: #7f8c8d;
+    }
+
+    @media (max-width: 992px) {
+      .main-container {
+        flex-direction: column;
+      }
+      .kpi-table {
+        font-size: 0.9rem;
+      }
+      #salaryPieChart {
+        max-width: 150px;
+        max-height: 150px;
+      }
+    }
+
+    .btn {
+      background-color: #f39c12;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #e67e22;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <h1>Xin chào, <strong>{{ user.username }}</strong></h1>
+    <button class="logout" onclick="window.location.href='/logout/'">Đăng xuất</button>
+  </div>
+
+  <div class="main-container">
+    <!-- Cột trái -->
+    <div class="left-column">
+      <div class="card" onclick="window.location.href='/edit_profile/'">
+        <h2>🧑‍💼 Thông tin tài khoản</h2>
+      </div>
+      <div class="card" onclick="window.location.href='/change-password/'">
+        <h2>🔒 Đổi mật khẩu</h2>
+      </div>
+      <a href="{% url 'salary_history' %}" class="card">
+        <h2>📊 Lịch sử thu nhập</h2>
+      </a>
+    </div>
+
+    <!-- Cột giữa: Thông báo nội bộ -->
+    <div class="middle-column">
+      <div class="large-card announcement-card-box">
+        <h2 class="announcement-title">📢 Thông báo nội bộ</h2>
+        <div class="announcement-list">
+          {% if announcements %}
+            {% for announcement in announcements %}
+              <div class="announcement-item">
+                <h3>{{ announcement.title }}</h3>
+                <p class="announcement-content">{{ announcement.content }}</p>
+                <div class="announcement-meta">
+                  <span>{{ announcement.created_at|date:"d/m/Y H:i" }}</span>
+                </div>
+              </div>
+            {% endfor %}
+          {% else %}
+            <p class="no-announcements">Chưa có thông báo nào.</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Cột phải: Biểu đồ thu nhập (giữ nguyên như bản gốc) -->
+    <div class="right-column">
+      <div class="card large-card">
+        <h2>💰 Thu nhập tháng này</h2>
+        <canvas id="salaryPieChart"></canvas>
+        <div style="margin-top: 1rem; font-size: 1rem; color: #7f8c8d; display: flex; gap: 1.5rem; flex-wrap: wrap;">
+          <span>Bậc lương: {{ salary_level }}</span>
+          <span>Tổng lương: {{ salary_this_month|add:commission_this_month|intcomma }} VNĐ</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- KPI -->
+    {% if user.employee and user.employee.department_id %}
+    {% with sales_department=user.employee.department.name|lower %}
+      {% if sales_department == "kinh doanh" %}
+        <div class="kpi-section">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h2 style="margin: 0;">Danh sách Hợp Đồng</h2>
+            <a href="{% url 'add_contract' %}" class="btn">Gửi Hợp Đồng Mới</a>
+          </div>
+
+          {% if kpis %}
+            <table class="kpi-table">
+              <thead>
+                <tr>
+                  <th>Mã hợp đồng</th>
+                  <th>ID sản phẩm</th>
+                  <th>Giá sản phẩm</th>
+                  <th>Hoa hồng</th>
+                  <th>Ngày tạo</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for kpi in kpis %}
+                  <tr>
+                    <td>{{ kpi.contract_id }}</td>
+                    <td>{{ kpi.product_id }}</td>
+                    <td>{{ kpi.price|intcomma }} VNĐ</td>
+                    <td>{{ kpi.commission|intcomma }} VNĐ</td>
+                    <td>{{ kpi.created_at|date:"d/m/Y H:i" }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% else %}
+            <p class="no-kpi">
+              Hiện tại không có hợp đồng nào.
+              <a href="{% url 'add_contract' %}" class="btn" style="margin-left: 8px;">Gửi Hợp Đồng Mới</a>
+            </p>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endwith %}
+    {% endif %}
+  </div>
+
+  <script>
+    const ctx = document.getElementById('salaryPieChart').getContext('2d');
+    const salary = {{ salary_this_month|default:"0" }};
+    const commission = {{ commission_this_month|default:"0" }};
+
+    const data = {
+      labels: ['Lương cơ bản', 'Hoa hồng'],
+      datasets: [{
+        label: 'Thu nhập',
+        data: [salary, commission],
+        backgroundColor: ['#3498db', '#2ecc71'],
+        borderColor: ['#2980b9', '#27ae60'],
+        borderWidth: 1,
+        barThickness: 40
+      }]
+    };
+
+    const config = {
+      type: 'bar',
+      data: data,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                let value = context.parsed.y;
+                return `${context.label}: ${value.toLocaleString()} VNĐ`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              font: {
+                size: 14
+              }
+            },
+            grid: {
+              display: false
+            }
+          },
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) {
+                if (value % 2000000 === 0) {
+                  return value.toLocaleString() + ' VNĐ';
+                }
+                return '';
+              }
+            }
+          }
+        }
+      }
+    };
+
+    new Chart(ctx, config);
+  </script>  
+</body>
+</html>

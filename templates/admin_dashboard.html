@@ -1,0 +1,268 @@
+{% load humanize %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Quản lý Nhân sự</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap & Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Style -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .card {
+            border: none;
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card h5 {
+            font-weight: 600;
+        }
+        .card-hover {
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 1rem 1.5rem rgba(0,0,0,0.1);
+            text-decoration: none;
+        }
+        .no-data-message {
+            text-align: center;
+            color: #6c757d;
+            font-style: italic;
+        }
+        .announcement-item {
+            border-bottom: 1px solid #e9ecef;
+            padding: 1rem 0;
+        }
+        .announcement-item:last-child {
+            border-bottom: none;
+        }
+        .announcement-content {
+            font-size: 0.9rem;
+            color: #6c757d;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Giới hạn 2 dòng */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="{% url 'admin_dashboard' %}">💼 m_staff</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="{% url 'admin_dashboard' %}">Trang chủ</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'admin_user' %}">Nhân viên</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'admin_department' %}">Phòng ban</a></li>
+                {% if user.is_superuser %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'contract_list' %}">Hợp đồng</a></li>
+                {% endif %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'salary' %}">Lương</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Đăng xuất</a></li>
+            </ul>            
+        </div>
+    </div>
+</nav>
+
+<!-- Nội dung chính -->
+<div class="container mt-5">
+    <h2 class="mb-4">👋 Xin chào Admin!</h2>
+    <p class="mb-4">Chào mừng đến với bảng điều khiển quản lý nhân sự.</p>
+
+    <!-- Cards thống kê -->
+    <div class="row g-4">
+        <div class="col-md-3">
+            <a href="{% url 'admin_user' %}" class="card text-white bg-primary card-hover d-block">
+                <div class="card-body">
+                    <h5 class="card-title">Nhân viên</h5>
+                    <p class="card-text fs-4">{{ employee_count }}</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="{% url 'admin_department' %}" class="card text-white bg-success card-hover d-block">
+                <div class="card-body">
+                    <h5 class="card-title">Phòng ban</h5>
+                    <p class="card-text fs-4">{{ department_count }}</p>
+                </div>
+            </a>
+        </div>
+        {% if user.is_superuser %}
+        <div class="col-md-3">
+            <a href="{% url 'contract_list' %}" class="card text-white bg-warning card-hover d-block">
+                <div class="card-body">
+                    <h5 class="card-title">Hợp đồng</h5>
+                    <p class="card-text fs-4">{{ contract_count }}</p>
+                </div>
+            </a>
+        </div>
+        {% endif %}
+        <div class="col-md-3">
+            <a href="{% url 'salary' %}" class="card text-white bg-danger card-hover">
+                <div class="card-body">
+                    <h5 class="card-title">Tổng lương</h5>
+                    <p class="card-text fs-4">
+                        {{ total_salary|floatformat:0|intcomma }} VND
+                    </p>                    
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Biểu đồ và Thông báo -->
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <div class="card p-3">
+                <h5 class="mb-3">Tỷ lệ nhân viên theo phòng ban</h5>
+                {% if no_data_message %}
+                    <p class="no-data-message">{{ no_data_message }}</p>
+                {% else %}
+                    <canvas id="pieChart"></canvas>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card p-3">
+                <h5 class="mb-3">Thông báo nội bộ</h5>
+                <a href="{% url 'announcements:announcement_create' %}" class="btn btn-primary mb-3">Thêm thông báo</a>
+                {% if announcements %}
+                    <div class="announcement-list">
+                        {% for announcement in announcements %}
+                            <div class="announcement-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-1">{{ announcement.title }}</h6>
+                                    <p class="announcement-content">{{ announcement.content }}</p>
+                                    <p class="mb-0 text-muted">{{ announcement.created_at|date:"d/m/Y H:i" }}</p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-sm btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#editAnnouncementModal" onclick="fillEditModal('{{ announcement.id }}', '{{ announcement.title }}', '{{ announcement.content|escapejs }}')">Sửa</button>
+                                    <a href="{% url 'announcements:announcement_delete' announcement.id %}" class="btn btn-sm btn-outline-danger" onclick="return confirm('Bạn có chắc muốn xóa thông báo này?');">Xóa</a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p class="no-data-message">Chưa có thông báo nào.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal chỉnh sửa thông báo -->
+<div class="modal fade" id="editAnnouncementModal" tabindex="-1" aria-labelledby="editAnnouncementModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form id="editAnnouncementForm" method="POST" action="{% url 'announcements:announcement_update' 0 %}">
+                {% csrf_token %}
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editAnnouncementModalLabel">Chỉnh sửa thông báo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="editTitle" class="form-label">Tiêu đề</label>
+                        <input type="text" class="form-control" id="editTitle" name="title" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="editContent" class="form-label">Nội dung</label>
+                        <textarea class="form-control" id="editContent" name="content" rows="4" required></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Dữ liệu động cho biểu đồ cột (Tỷ lệ nhân viên theo phòng ban)
+    const departmentLabels = [];
+    const departmentCounts = [];
+
+    {% for dept in department_data %}
+        departmentLabels.push("{{ dept.name }}");
+        departmentCounts.push({{ dept.count }});
+    {% endfor %}
+
+    // Debug dữ liệu
+    console.log("Department Labels:", departmentLabels);
+    console.log("Department Counts:", departmentCounts);
+
+    {% if not no_data_message %}
+    const pieChartEmployee = new Chart(document.getElementById('pieChart'), {
+        type: 'pie',
+        data: {
+            labels: departmentLabels,
+            datasets: [{
+                label: 'Tỷ lệ nhân viên',
+                data: departmentCounts,
+                backgroundColor: [
+                    '#0d6efd',
+                    '#198754',
+                    '#ffc107',
+                    '#dc3545',
+                    '#6f42c1',
+                    '#20c997',
+                    '#fd7e14',
+                    '#6610f2'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            plugins: {
+                legend: {
+                    position: 'right'
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.label || '';
+                            let value = context.raw || 0;
+                            return `${label}: ${value} người`;
+                        }
+                    }
+                }
+            }
+        }
+    });
+    {% endif %}
+
+    // Hàm điền dữ liệu vào modal chỉnh sửa
+    function fillEditModal(id, title, content) {
+        document.getElementById('editTitle').value = title;
+        document.getElementById('editContent').value = content;
+        const form = document.getElementById('editAnnouncementForm');
+        form.action = "{% url 'announcements:announcement_update' 0 %}".replace('0', id);
+    }
+</script>
+</body>
+</html>
+{% endblock %}
