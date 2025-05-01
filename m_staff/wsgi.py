@@ -14,3 +14,11 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'm_staff.settings')
 
 application = get_wsgi_application()
+
+# Chạy tạo superuser nếu chưa tồn tại
+try:
+    from .create_superuser import run
+    run()
+except Exception as e:
+    pass  # Hoặc in ra lỗi nếu bạn đang debug
+
