@@ -14,6 +14,7 @@ class SalaryHistory(models.Model):
 
     def __str__(self):
         return f"{self.employee} - Level {self.salary_level} from {self.effective_date}"
+
 class Position(models.Model):
     name = models.CharField(max_length=100)
 
@@ -21,6 +22,13 @@ class Position(models.Model):
         return self.name
 
 class Employee(models.Model):
+    # Định nghĩa các lựa chọn cho trạng thái đào tạo
+    TRAINING_STATUS_CHOICES = [
+        ('new', 'Chưa đào tạo'),
+        ('in_progress', 'Đang đào tạo'),
+        ('done', 'Đã đào tạo'),
+    ]
+
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     full_name = models.CharField(max_length=100, blank=True, null=True)
     email = models.EmailField(unique=True, null=True, blank=True)
@@ -31,6 +39,11 @@ class Employee(models.Model):
     date_of_birth = models.DateField(blank=True, null=True)
     department = models.ForeignKey(Department, on_delete=models.SET_NULL, null=True, blank=True, related_name='employees')
     salary_level = models.IntegerField(default=1)
+    training_status = models.CharField(
+        max_length=20,
+        choices=TRAINING_STATUS_CHOICES,
+        default='new'
+    )
 
     def get_salary(self, salary_level=None):
         salary_base = 2340000

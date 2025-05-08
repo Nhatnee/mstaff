@@ -3,21 +3,21 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib import messages
-from .models import Employee
-from .forms import UserProfileForm
+from .models import Employee, SalaryHistory
+from .forms import UserProfileForm, ChangePasswordForm
 from department.models import Department
 from django.db.models import Sum
 from kpi.models import Contract
-from .forms import ChangePasswordForm
-from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.decorators import login_required
-from .models import Employee, SalaryHistory
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 from announcements.models import Announcement
 
 @login_required
 def admin_user(request):
+    if not request.user.is_superuser:
+        messages.error(request, "Bạn không có quyền truy cập trang này!")
+        return redirect('home')
+
     if request.method == "POST":
         # Tạo nhân viên mới
         if 'create_user' in request.POST:
@@ -37,13 +37,15 @@ def admin_user(request):
                 )
                 Employee.objects.create(
                     user=user,
-                    salary_level=1
+                    salary_level=1,
+                    training_status='new'  # Đặt trạng thái đào tạo mặc định
                 )
                 messages.success(request, f'Đã tạo nhân viên {nv_id} thành công!')
                 return redirect('admin_user')
             except Exception as e:
                 messages.error(request, f'Có lỗi xảy ra: {str(e)}')
 
+        # Xóa nhân viên
         elif 'delete_user' in request.POST:
             user_id = request.POST.get('user_id')
             try:
@@ -56,6 +58,34 @@ def admin_user(request):
                 return redirect('admin_user')
             except User.DoesNotExist:
                 messages.error(request, 'Nhân viên không tồn tại!')
+            except Exception as e:
+                messages.error(request, f'Có lỗi xảy ra: {str(e)}')
+
+        # Thay đổi trạng thái đào tạo
+        elif 'change_training' in request.POST:
+            user_id = request.POST.get('user_id')
+            try:
+                user = User.objects.get(id=user_id)
+                if user.is_superuser:
+                    messages.error(request, 'Không thể thay đổi trạng thái đào tạo cho quản trị viên!')
+                    return redirect('admin_user')
+                
+                employee = get_object_or_404(Employee, user=user)
+                current_status = employee.training_status
+                if current_status == 'new':
+                    employee.training_status = 'in_progress'
+                    messages.success(request, f'Nhân viên {user.username} đã bắt đầu đào tạo!')
+                elif current_status == 'in_progress':
+                    employee.training_status = 'done'
+                    messages.success(request, f'Nhân viên {user.username} đã hoàn thành đào tạo!')
+                elif current_status == 'done':
+                    messages.info(request, f'Nhân viên {user.username} đã hoàn thành đào tạo, không thể thay đổi thêm!')
+                employee.save()
+                return redirect('admin_user')
+            except User.DoesNotExist:
+                messages.error(request, 'Nhân viên không tồn tại!')
+            except Employee.DoesNotExist:
+                messages.error(request, 'Thông tin nhân viên không tồn tại!')
             except Exception as e:
                 messages.error(request, f'Có lỗi xảy ra: {str(e)}')
 
@@ -151,12 +181,6 @@ def edit_profile(request):
 
     return render(request, 'edit_profile.html', {'form': form})
 
-from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
-from user.models import Employee
-from department.models import Department
-from kpi.models import Contract
-
 @login_required
 def admin_dashboard(request):
     employees = Employee.objects.select_related('user', 'department')
@@ -195,7 +219,6 @@ def admin_dashboard(request):
         'announcements': announcements,
     }
     return render(request, 'admin_dashboard.html', context)
-
 
 @login_required
 def home(request):

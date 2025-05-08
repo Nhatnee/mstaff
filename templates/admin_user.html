@@ -32,7 +32,14 @@
         }
 
         .btn-sm {
-            padding: 0.25rem 0.6rem;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .btn-training {
+            padding: 0.25rem 0.75rem;
+            min-width: 120px;
+            text-align: left;
         }
 
         .navbar-brand {
@@ -42,6 +49,11 @@
         .navbar .nav-link.active {
             font-weight: bold;
             color: #000000 !important;
+        }
+
+        .action-buttons form, .action-buttons a {
+            display: inline-block;
+            margin-right: 0.25rem;
         }
     </style>
 </head>
@@ -124,16 +136,43 @@
                                         0 VND
                                     {% endif %}
                                 </td>
-                                <td class="text-center">
-                                    <a href="{% url 'admin_employee_details' user.id %}" class="btn btn-sm btn-warning me-1">
-                                        <i class="fas fa-edit"></i> Sửa
+                                <td class="text-center action-buttons">
+                                    <!-- Nút Đào tạo -->
+                                    {% if user.employee %}
+                                        <form method="POST" style="display:inline;" onsubmit="return confirm('Bạn có chắc chắn muốn thay đổi trạng thái đào tạo cho {{ user.username }}?');">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="change_training" value="1">
+                                            <input type="hidden" name="user_id" value="{{ user.id }}">
+                                            {% if user.employee.training_status == 'new' %}
+                                                <button type="submit" class="btn btn-sm btn-info btn-training" title="Bắt đầu đào tạo">
+                                                    <i class="fas fa-chalkboard-teacher me-1"></i> Đào tạo
+                                                </button>
+                                            {% elif user.employee.training_status == 'in_progress' %}
+                                                <button type="submit" class="btn btn-sm btn-secondary btn-training" title="Hoàn thành đào tạo">
+                                                    <i class="fas fa-chalkboard-teacher me-1"></i> Đang đào tạo
+                                                </button>
+                                            {% elif user.employee.training_status == 'done' %}
+                                                <button type="button" class="btn btn-sm btn-success btn-training" disabled title="Đã hoàn thành đào tạo">
+                                                    <i class="fas fa-check-circle me-1"></i> Đã đào tạo
+                                                </button>
+                                            {% endif %}
+                                        </form>
+                                    {% else %}
+                                        <button type="button" class="btn btn-sm btn-secondary btn-training" disabled title="Chưa có thông tin nhân viên">
+                                            <i class="fas fa-chalkboard-teacher me-1"></i> Đào tạo
+                                        </button>
+                                    {% endif %}
+                                    <!-- Nút Sửa -->
+                                    <a href="{% url 'admin_employee_details' user.id %}" class="btn btn-sm btn-warning" title="Sửa thông tin">
+                                        <i class="fas fa-edit"></i>
                                     </a>
-                                    <form method="POST" style="display:inline;" onsubmit="return confirm('Bạn có chắc chắn muốn xóa nhân viên này?');">
+                                    <!-- Nút Xóa -->
+                                    <form method="POST" style="display:inline;" onsubmit="return confirm('Bạn có chắc chắn muốn xóa nhân viên {{ user.username }}?');">
                                         {% csrf_token %}
                                         <input type="hidden" name="delete_user" value="1">
                                         <input type="hidden" name="user_id" value="{{ user.id }}">
-                                        <button type="submit" class="btn btn-sm btn-danger">
-                                            <i class="fas fa-trash-alt"></i> Xóa
+                                        <button type="submit" class="btn btn-sm btn-danger" title="Xóa nhân viên">
+                                            <i class="fas fa-trash-alt"></i>
                                         </button>
                                     </form>
                                 </td>
