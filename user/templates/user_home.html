@@ -10,10 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
+    /* CSS giữ nguyên như bạn đã cung cấp */
     * {
       box-sizing: border-box;
     }
-
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -23,29 +23,31 @@
       position: relative;
       overflow-x: hidden;
     }
-
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
       background-color: rgba(255, 255, 255, 0.8);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       backdrop-filter: blur(12px);
       position: sticky;
       top: 0;
       z-index: 10;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-
     .navbar h1 {
       font-size: 1.6rem;
       font-weight: 600;
       color: #2c3e50;
       margin: 0;
     }
-
-    .logout {
+    .navbar-buttons {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .logout, .details-btn {
       background-color: #e67e22;
       border: none;
       color: #fff;
@@ -55,12 +57,41 @@
       transition: all 0.3s ease;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
-
-    .logout:hover {
+    .logout:hover, .details-btn:hover {
       background-color: #d35400;
       transform: translateY(-4px);
     }
-
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: rgba(255, 255, 255, 0.9);
+      min-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border: 2px solid #f39c12;
+      backdrop-filter: blur(8px);
+    }
+    .dropdown-content a {
+      color: #34495e;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      display: block;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease;
+    }
+    .dropdown-content a:hover {
+      background-color: #f1c40f;
+      border-radius: 8px;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
     .main-container {
       display: flex;
       flex-wrap: wrap;
@@ -69,37 +100,46 @@
       max-width: 1400px;
       margin: 0 auto;
     }
-
-    .left-column {
-  flex: 0.8; /* 👉 Cột trái nhỏ hơn */
-}
-
-.middle-column {
-  flex: 1.2; /* 👉 Cột giữa giữ vừa phải */
-}
-
-.right-column {
-  flex: 2; /* 👉 Cột thu nhập rộng hơn */
-}
-
-.left-column,
-.middle-column,
-.right-column {
-  min-width: 250px;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-
-    .card a {
-      text-decoration: none !important;
-      color: inherit;
+    .middle-column {
+      flex: 1.2;
+    }
+    .right-column {
+      flex: 1.6;
+    }
+    .full-width-column {
+      flex: 1 1 100%;
+    }
+    .row-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      width: 100%;
+    }
+    .half-column.kpi-column {
+      flex: 4.5;
+      min-width: 250px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .half-column.contract-column {
+      flex: 6;
+      min-width: 250px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .middle-column,
+    .right-column,
+    .full-width-column,
+    .half-column {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
     }
     a {
       text-decoration: none;
     }
-
     .card {
       background: rgba(255, 255, 255, 0.9);
       border: 2px solid #f39c12;
@@ -111,13 +151,11 @@
       cursor: pointer;
       backdrop-filter: blur(8px);
     }
-
     .card:hover {
       transform: translateY(-6px);
       background-color: #f1c40f;
       border-color: #e67e22;
     }
-
     .card h2 {
       font-size: 1.15rem;
       margin: 0;
@@ -125,7 +163,6 @@
       color: #34495e;
       line-height: 1.4;
     }
-
     .large-card {
       width: 100%;
       padding: 2rem 1.5rem;
@@ -142,81 +179,62 @@
       backdrop-filter: blur(8px);
       padding-top: 0.5rem !important;
     }
-
     .large-card:hover {
       transform: none;
       background-color: rgba(255, 255, 255, 0.9);
       border-color: #f39c12;
       cursor: default;
     }
-
-    #salaryPieChart {
+    #salaryPieChart, #kpiChart {
       max-width: 100%;
       max-height: 200px;
     }
     .large-card h2 {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
     .announcement-list {
       max-height: 150px;
       overflow-y: auto;
       width: 100%;
       padding: 0 1rem;
     }
-
     .announcement-item {
       padding: 0.5rem 0;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       text-align: left;
     }
-
     .announcement-item:last-child {
       border-bottom: none;
     }
-
     .announcement-item h3 {
-  font-size: 1.1rem;
-  margin: 0 0 0.25rem;
-  color: #34495e;
-}
-.announcement-card-box {
-  padding-top: 1rem !important; /* giảm phần đẩy xuống */
-  padding-bottom: 1.5rem;
-}
-.announcement-content {
-  font-size: 0.9rem;
-  color: #7f8c8d;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-bottom: 0.25rem;
-}
-
-.announcement-meta {
-  font-size: 0.85rem;
-  color: #7f8c8d;
-}
-
+      font-size: 1.1rem;
+      margin: 0 0 0.25rem;
+      color: #34495e;
+    }
+    .announcement-card-box {
+      padding-top: 1rem !important;
+      padding-bottom: 1.5rem;
+    }
+    .announcement-content {
+      font-size: 0.9rem;
+      color: #7f8c8d;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 0.25rem;
+    }
+    .announcement-meta {
+      font-size: 0.85rem;
+      color: #7f8c8d;
+    }
     .no-announcements {
       text-align: center;
       padding: 1rem;
       color: #7f8c8d;
     }
-
-    .kpi-section {
-      width: 100%;
-      margin-top: 2rem;
-    }
-
-    .kpi-section h2 {
-      font-size: 1.5rem;
-      color: #2c3e50;
-      margin-bottom: 1rem;
-    }
-
     .kpi-table {
       width: 100%;
       border-collapse: collapse;
@@ -225,43 +243,106 @@
       overflow: hidden;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
-
     .kpi-table th,
     .kpi-table td {
       padding: 1rem;
       text-align: left;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
-
     .kpi-table th {
       background-color: #f39c12;
       color: #fff;
       font-weight: 600;
     }
-
     .kpi-table tr:hover {
       background-color: rgba(243, 156, 18, 0.1);
     }
-
     .no-kpi {
       text-align: center;
       padding: 2rem;
       color: #7f8c8d;
     }
-
+    .contract-form {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.9);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+      border: 2px solid #f39c12;
+      width: 300px;
+    }
+    .contract-form.active {
+      display: block;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #34495e;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .close-btn, .submit-btn {
+      background-color: #f39c12;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .close-btn:hover, .submit-btn:hover {
+      background-color: #e67e22;
+    }
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+    .overlay.active {
+      display: block;
+    }
     @media (max-width: 992px) {
       .main-container {
         flex-direction: column;
       }
+      .row-container {
+        flex-direction: column;
+      }
+      .half-column.kpi-column,
+      .half-column.contract-column {
+        flex: 1 1 100%;
+      }
+      .right-column {
+        flex: 1 1 100%;
+      }
       .kpi-table {
         font-size: 0.9rem;
       }
-      #salaryPieChart {
+      #salaryPieChart, #kpiChart {
         max-width: 150px;
         max-height: 150px;
       }
+      .contract-form {
+        width: 90%;
+      }
     }
-
     .btn {
       background-color: #f39c12;
       color: #fff;
@@ -273,33 +354,41 @@
       text-decoration: none;
       display: inline-block;
     }
-
     .btn:hover {
       background-color: #e67e22;
+    }
+    .edit-btn {
+      background-color: #3498db;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-left: 0.5rem;
+    }
+    .edit-btn:hover {
+      background-color: #2980b9;
     }
   </style>
 </head>
 <body>
-
   <div class="navbar">
     <h1>Xin chào, <strong>{{ user.username }}</strong></h1>
-    <button class="logout" onclick="window.location.href='/logout/'">Đăng xuất</button>
+    <div class="navbar-buttons">
+      <div class="dropdown">
+        <button class="details-btn">Chi tiết</button>
+        <div class="dropdown-content">
+          <a href="/edit_profile/">🧑‍💼 Thông tin tài khoản</a>
+          <a href="/change-password/">🔒 Đổi mật khẩu</a>
+          <a href="{% url 'salary_history' %}">📊 Lịch sử thu nhập</a>
+        </div>
+      </div>
+      <button class="logout" onclick="window.location.href='/logout/'">Đăng xuất</button>
+    </div>
   </div>
 
   <div class="main-container">
-    <!-- Cột trái -->
-    <div class="left-column">
-      <div class="card" onclick="window.location.href='/edit_profile/'">
-        <h2>🧑‍💼 Thông tin tài khoản</h2>
-      </div>
-      <div class="card" onclick="window.location.href='/change-password/'">
-        <h2>🔒 Đổi mật khẩu</h2>
-      </div>
-      <a href="{% url 'salary_history' %}" class="card">
-        <h2>📊 Lịch sử thu nhập</h2>
-      </a>
-    </div>
-
     <!-- Cột giữa: Thông báo nội bộ -->
     <div class="middle-column">
       <div class="large-card announcement-card-box">
@@ -322,117 +411,174 @@
       </div>
     </div>
 
-    <!-- Cột phải: Biểu đồ thu nhập (giữ nguyên như bản gốc) -->
+    <!-- Cột phải: Biểu đồ thu nhập -->
     <div class="right-column">
       <div class="card large-card">
         <h2>💰 Thu nhập tháng này</h2>
         <canvas id="salaryPieChart"></canvas>
         <div style="margin-top: 1rem; font-size: 1rem; color: #7f8c8d; display: flex; gap: 1.5rem; flex-wrap: wrap;">
           <span>Bậc lương: {{ salary_level }}</span>
-          <span>Tổng lương: {{ salary_this_month|add:commission_this_month|intcomma }} VNĐ</span>
+          <span>Tổng lương: {{ total_salary|floatformat:0|intcomma }} VNĐ</span>
+          <span>BHXH: {{ bhxh|floatformat:0|intcomma }} VNĐ</span>
+          <!-- <span>Hoa hồng: {{ commission_this_month|floatformat:0|intcomma }} VNĐ</span>
+          <span>Tổng lương: {{ total_salary|floatformat:0|intcomma }} VNĐ</span> -->
         </div>
       </div>
     </div>
 
-    <!-- KPI -->
-    {% if user.employee and user.employee.department_id %}
-    {% with sales_department=user.employee.department.name|lower %}
-      {% if sales_department == "kinh doanh" %}
-        <div class="kpi-section">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h2 style="margin: 0;">Danh sách Hợp Đồng</h2>
-            <a href="{% url 'add_contract' %}" class="btn">Gửi Hợp Đồng Mới</a>
+    <!-- Cột KPI và Danh sách hợp đồng (60:40) -->
+    <div class="row-container">
+      <!-- Biểu đồ KPI -->
+      <div class="half-column kpi-column">
+        <div class="card large-card">
+          <h2>📈 KPI Tháng Này</h2>
+          <canvas id="kpiChart"></canvas>
+          <div style="margin-top: 1rem; font-size: 1rem; color: #7f8c8d; display: flex; gap: 1.5rem; flex-wrap: wrap;">
+            <span>Mục tiêu: {{ kpi_target|intcomma }} VNĐ</span>
+            <span>Đạt được: {{ kpi_achieved|intcomma }} VNĐ</span>
+            <span>Phần trăm: {{ kpi_percentage|floatformat:1 }}%</span>
           </div>
+        </div>
+      </div>
 
-          {% if kpis %}
+      <!-- Danh sách hợp đồng -->
+      <div class="half-column contract-column">
+        <div class="large-card">
+          <h2 style="margin-bottom: 1rem;">📄 Danh sách Hợp đồng</h2>
+          {% if contracts %}
+            <div style="overflow-x: auto; width: 100%;">
+              <table class="kpi-table">
+                <thead>
+                  <tr>
+                    <th>Tên hợp đồng</th>
+                    <th>Giá bán</th>
+                    <th>Hoa hồng</th>
+                    <th>Hoạt động</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for contract in contracts %}
+                    <tr>
+                      <td>{{ contract.name }}</td>
+                      <td>{{ contract.sale_price|intcomma }} đ</td>
+                      <td>{{ contract.commission|intcomma }} đ</td>
+                      <td>
+                        <button class="btn create-contract-btn" data-contract-id="{{ contract.id }}">Tạo hợp đồng</button>
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          {% else %}
+            <p class="no-kpi">Không có hợp đồng nào.</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Hợp đồng đã tạo -->
+    <div class="full-width-column">
+      <div class="large-card">
+        <h2 style="margin-bottom: 1rem;">📑 Hợp đồng đã tạo</h2>
+        {% if created_contracts %}
+          <div style="overflow-x: auto; width: 100%;">
             <table class="kpi-table">
               <thead>
                 <tr>
-                  <th>Mã hợp đồng</th>
-                  <th>ID sản phẩm</th>
-                  <th>Giá sản phẩm</th>
+                  <th>Tên hợp đồng</th>
+                  <th>Tên khách hàng</th>
+                  <th>Số điện thoại</th>
+                  <th>Giá bán</th>
                   <th>Hoa hồng</th>
-                  <th>Ngày tạo</th>
+                  <th>Hoạt động</th>
                 </tr>
               </thead>
               <tbody>
-                {% for kpi in kpis %}
+                {% for contract in created_contracts %}
                   <tr>
-                    <td>{{ kpi.contract_id }}</td>
-                    <td>{{ kpi.product_id }}</td>
-                    <td>{{ kpi.price|intcomma }} VNĐ</td>
-                    <td>{{ kpi.commission|intcomma }} VNĐ</td>
-                    <td>{{ kpi.created_at|date:"d/m/Y H:i" }}</td>
+                    <td>{{ contract.contract.name }}</td>
+                    <td>{{ contract.customer_name }}</td>
+                    <td>{{ contract.customer_phone }}</td>
+                    <td>{{ contract.contract.sale_price|intcomma }} đ</td>
+                    <td>{{ contract.contract.commission|intcomma }} đ</td>
+                    <td>
+                      <button class="btn edit-contract-btn" 
+                              data-contract-id="{{ contract.id }}"
+                              data-customer-name="{{ contract.customer_name }}"
+                              data-customer-phone="{{ contract.customer_phone }}">Sửa</button>
+                    </td>
                   </tr>
                 {% endfor %}
               </tbody>
             </table>
-          {% else %}
-            <p class="no-kpi">
-              Hiện tại không có hợp đồng nào.
-              <a href="{% url 'add_contract' %}" class="btn" style="margin-left: 8px;">Gửi Hợp Đồng Mới</a>
-            </p>
-          {% endif %}
-        </div>
-      {% endif %}
-    {% endwith %}
-    {% endif %}
+          </div>
+        {% else %}
+          <p class="no-kpi">Chưa có hợp đồng nào được tạo.</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay và Form tạo/sửa hợp đồng -->
+  <div class="overlay" id="overlay"></div>
+  <div class="contract-form" id="contract-form">
+    <h2 id="form-title" style="margin-bottom: 1rem; color: #34495e;">Tạo Hợp Đồng</h2>
+    <form method="POST" id="contract-form-element">
+      {% csrf_token %}
+      <input type="hidden" name="contract" id="contract-id">
+      <input type="hidden" name="created_contract_id" id="created-contract-id">
+      <input type="hidden" name="action" id="form-action" value="create">
+      <div class="form-group">
+        <label for="customer_name">Tên khách hàng:</label>
+        <input type="text" name="customer_name" id="customer_name" required>
+      </div>
+      <div class="form-group">
+        <label for="customer_phone">Số điện thoại:</label>
+        <input type="text" name="customer_phone" id="customer_phone" required>
+      </div>
+      <div style="display: flex; gap: 1rem;">
+        <button type="button" class="close-btn" id="close-form-btn">Đóng</button>
+        <button type="submit" class="submit-btn" id="submit-btn">Tạo</button>
+      </div>
+    </form>
   </div>
 
   <script>
-    const ctx = document.getElementById('salaryPieChart').getContext('2d');
+    // Biểu đồ thu nhập
+    const salaryCtx = document.getElementById('salaryPieChart').getContext('2d');
     const salary = {{ salary_this_month|default:"0" }};
     const commission = {{ commission_this_month|default:"0" }};
+    const bhxh = {{ bhxh|default:"0" }};
 
-    const data = {
-      labels: ['Lương cơ bản', 'Hoa hồng'],
+    const salaryData = {
+      labels: ['Lương', 'Hoa hồng', 'BHXH'],
       datasets: [{
         label: 'Thu nhập',
-        data: [salary, commission],
-        backgroundColor: ['#3498db', '#2ecc71'],
-        borderColor: ['#2980b9', '#27ae60'],
-        borderWidth: 1,
-        barThickness: 40
+        data: [salary, commission, bhxh],
+        backgroundColor: ['#3498db', '#2ecc71', '#e74c3c'],
+        borderColor: ['#2980b9', '#27ae60', '#c0392b'],
+        borderWidth: 1
       }]
     };
 
-    const config = {
-      type: 'bar',
-      data: data,
+    const salaryConfig = {
+      type: 'pie',
+      data: salaryData,
       options: {
         responsive: true,
         plugins: {
           legend: {
-            display: false
+            position: 'bottom',
+            labels: {
+              font: { size: 14 }
+            }
           },
           tooltip: {
             callbacks: {
               label: function(context) {
-                let value = context.parsed.y;
+                let value = context.parsed;
                 return `${context.label}: ${value.toLocaleString()} VNĐ`;
-              }
-            }
-          }
-        },
-        scales: {
-          x: {
-            ticks: {
-              font: {
-                size: 14
-              }
-            },
-            grid: {
-              display: false
-            }
-          },
-          y: {
-            beginAtZero: true,
-            ticks: {
-              callback: function(value) {
-                if (value % 2000000 === 0) {
-                  return value.toLocaleString() + ' VNĐ';
-                }
-                return '';
               }
             }
           }
@@ -440,7 +586,113 @@
       }
     };
 
-    new Chart(ctx, config);
-  </script>  
+    new Chart(salaryCtx, salaryConfig);
+
+    // Biểu đồ KPI (Progress Circle)
+    const kpiCtx = document.getElementById('kpiChart').getContext('2d');
+    const kpiPercentage = {{ kpi_percentage|default:"0" }};
+
+    const kpiData = {
+      labels: ['Đạt được', 'Còn lại'],
+      datasets: [{
+        label: 'KPI',
+        data: [kpiPercentage, 100 - kpiPercentage],
+        backgroundColor: ['#2ecc71', '#ecf0f1'],
+        borderColor: ['#27ae60', '#d5dbdb'],
+        borderWidth: 1
+      }]
+    };
+
+    const kpiConfig = {
+      type: 'doughnut',
+      data: kpiData,
+      options: {
+        responsive: true,
+        cutout: '70%',
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            enabled: false
+          },
+          title: {
+            display: true,
+            text: `${kpiPercentage.toFixed(1)}%`,
+            position: 'center',
+            font: {
+              size: 24,
+              weight: 'bold'
+            },
+            color: '#34495e'
+          }
+        }
+      }
+    };
+
+    new Chart(kpiCtx, kpiConfig);
+
+    // Xử lý form tạo/sửa hợp đồng
+    const createContractButtons = document.querySelectorAll('.create-contract-btn');
+    const editContractButtons = document.querySelectorAll('.edit-contract-btn');
+    const contractForm = document.getElementById('contract-form');
+    const contractFormElement = document.getElementById('contract-form-element');
+    const overlay = document.getElementById('overlay');
+    const closeFormBtn = document.getElementById('close-form-btn');
+    const contractIdInput = document.getElementById('contract-id');
+    const createdContractIdInput = document.getElementById('created-contract-id');
+    const customerNameInput = document.getElementById('customer_name');
+    const customerPhoneInput = document.getElementById('customer_phone');
+    const formTitle = document.getElementById('form-title');
+    const submitBtn = document.getElementById('submit-btn');
+    const formActionInput = document.getElementById('form-action');
+
+    function resetForm() {
+      contractFormElement.reset();
+      contractIdInput.value = '';
+      createdContractIdInput.value = '';
+      formTitle.textContent = 'Tạo Hợp Đồng';
+      submitBtn.textContent = 'Tạo';
+      formActionInput.value = 'create';
+    }
+
+    createContractButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        resetForm();
+        const contractId = button.getAttribute('data-contract-id');
+        contractIdInput.value = contractId;
+        contractForm.classList.add('active');
+        overlay.classList.add('active');
+      });
+    });
+
+    editContractButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const createdContractId = button.getAttribute('data-contract-id');
+        const customerName = button.getAttribute('data-customer-name');
+        const customerPhone = button.getAttribute('data-customer-phone');
+        formTitle.textContent = 'Sửa Hợp Đồng';
+        submitBtn.textContent = 'Lưu';
+        formActionInput.value = 'edit';
+        createdContractIdInput.value = createdContractId;
+        customerNameInput.value = customerName;
+        customerPhoneInput.value = customerPhone;
+        contractForm.classList.add('active');
+        overlay.classList.add('active');
+      });
+    });
+
+    closeFormBtn.addEventListener('click', () => {
+      contractForm.classList.remove('active');
+      overlay.classList.remove('active');
+      resetForm();
+    });
+
+    overlay.addEventListener('click', () => {
+      contractForm.classList.remove('active');
+      overlay.classList.remove('active');
+      resetForm();
+    });
+  </script>
 </body>
 </html>

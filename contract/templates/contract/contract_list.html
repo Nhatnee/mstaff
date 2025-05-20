@@ -3,7 +3,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Quản lý Phòng ban</title>
+    <title>Quản lý Hợp đồng</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap & Google Fonts -->
@@ -66,8 +66,8 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="{% url 'admin_dashboard' %}">Trang chủ</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'admin_user' %}">Nhân viên</a></li>
-                <li class="nav-item"><a class="nav-link active" href="{% url 'admin_department' %}">Phòng ban</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'contract_list' %}">Hợp đồng</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'admin_department' %}">Phòng ban</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{% url 'contract_list' %}">Hợp đồng</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'salary' %}">Lương</a></li>
                 <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Đăng xuất</a></li>
             </ul>
@@ -89,9 +89,9 @@
 
     <div class="card p-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2><i class="fas fa-sitemap me-2"></i>Quản lý Phòng ban</h2>
-            <a href="{% url 'admin_add_department' %}" class="btn btn-primary">
-                <i class="fas fa-plus"></i> Thêm phòng ban
+            <h2><i class="fas fa-file-contract me-2"></i>Quản lý Hợp đồng</h2>
+            <a href="{% url 'contract_add' %}" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Thêm hợp đồng
             </a>
         </div>
 
@@ -100,31 +100,35 @@
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Tên phòng ban</th>
-                        <th>Số nhân viên</th>
+                        <th>Tên</th>
+                        <th>Giá bán</th>
+                        <th>Hoa hồng</th>
                         <th class="text-center">Hành động</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for dept in departments %}
+                    {% for contract in contracts %}
                         <tr>
                             <td>{{ forloop.counter }}</td>
-                            <td class="fw-semibold">{{ dept.name }}</td>
-                            <td>{{ dept.employee_count }}</td>
+                            <td class="fw-semibold">{{ contract.name }}</td>
+                            <td>{{ contract.sale_price|intcomma }}</td>
+                            <td>{{ contract.commission|intcomma }}</td>
                             <td class="text-center">
-                                <a href="{% url 'admin_edit_department' dept.id %}" class="btn btn-warning btn-sm me-1">
+                                <a href="{% url 'contract_detail' contract.pk %}" class="btn btn-info btn-sm me-1">
+                                    <i class="fas fa-eye"></i> Chi tiết
+                                </a>
+                                <a href="{% url 'contract_edit' contract.pk %}" class="btn btn-warning btn-sm me-1">
                                     <i class="fas fa-edit"></i> Sửa
                                 </a>
-                                <!-- Nút Xóa gọi Modal -->
-                                <button type="button" class="btn btn-danger btn-sm me-1" data-bs-toggle="modal" data-bs-target="#deleteModal" 
-                                        data-dept-id="{{ dept.id }}" data-dept-name="{{ dept.name }}">
-                                    <i class="fas fa-trash-alt"></i> Xoá
+                                <button type="button" class="btn btn-danger btn-sm me-1" data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                        data-contract-id="{{ contract.pk }}" data-contract-name="{{ contract.name }}">
+                                    <i class="fas fa-trash-alt"></i> Xóa
                                 </button>
                             </td>
                         </tr>
                     {% empty %}
                         <tr>
-                            <td colspan="4" class="text-center text-muted">Chưa có phòng ban nào.</td>
+                            <td colspan="5" class="text-center text-muted">Chưa có hợp đồng nào.</td>
                         </tr>
                     {% endfor %}
                 </tbody>
@@ -138,11 +142,11 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteModalLabel">Xác nhận xóa phòng ban</h5>
+                <h5 class="modal-title" id="deleteModalLabel">Xác nhận xóa hợp đồng</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p>Bạn có chắc chắn muốn xóa phòng ban "<span id="deptName"></span>"?</p>
+                <p>Bạn có chắc chắn muốn xóa hợp đồng "<span id="contractName"></span>"?</p>
             </div>
             <div class="modal-footer">
                 <form id="deleteForm" method="POST" action="">
@@ -162,14 +166,14 @@
     const deleteModal = document.getElementById('deleteModal');
     deleteModal.addEventListener('show.bs.modal', function (event) {
         const button = event.relatedTarget;
-        const deptId = button.getAttribute('data-dept-id');
-        const deptName = button.getAttribute('data-dept-name');
+        const contractId = button.getAttribute('data-contract-id');
+        const contractName = button.getAttribute('data-contract-name');
 
-        const deptNameElement = deleteModal.querySelector('#deptName');
-        deptNameElement.textContent = deptName;
+        const contractNameElement = deleteModal.querySelector('#contractName');
+        contractNameElement.textContent = contractName;
 
         const deleteForm = deleteModal.querySelector('#deleteForm');
-        deleteForm.action = '{% url "admin_delete_department" 999 %}'.replace('999', deptId);
+        deleteForm.action = '{% url "contract_delete" 999 %}'.replace('999', contractId);
     });
 </script>
 </body>

@@ -3,6 +3,8 @@ from django.db import models
 from department.models import Department
 from django.db.models import Sum
 from django.core.validators import MinValueValidator, MaxValueValidator
+from contract.models import Contract
+from decimal import Decimal
 
 class SalaryHistory(models.Model):
     employee = models.ForeignKey('Employee', on_delete=models.CASCADE, related_name='salary_histories')
@@ -53,17 +55,55 @@ class Employee(models.Model):
         }
         level = salary_level if salary_level is not None else self.salary_level
         return int(salary_base * coefficients.get(level, 1))
-    
+
+    def get_bhxh(self):
+        return Decimal(str(self.get_salary())) * Decimal('0.105')
+
     def get_total_commission(self, start_date=None, end_date=None):
-        from kpi.models import Contract
-        queryset = Contract.objects.filter(employee=self)
-        if start_date is not None and end_date is not None:
-            queryset = queryset.filter(created_at__range=[start_date, end_date])
-        total_commission = queryset.aggregate(total_commission=Sum('commission'))['total_commission']
-        return int(total_commission or 0)
+        # Lấy tất cả hợp đồng của nhân viên trong khoảng thời gian
+        contracts = UserContract.objects.filter(employee=self)
+        if start_date and end_date:
+            contracts = contracts.filter(
+                created_at__gte=start_date,
+                created_at__lte=end_date
+            )
+        return sum(uc.contract.commission for uc in contracts)
 
     def get_total_salary(self, start_date=None, end_date=None):
-        return self.get_salary() + self.get_total_commission(start_date, end_date)
+        salary = Decimal(str(self.get_salary()))  # Convert to Decimal
+        commission = self.get_total_commission(start_date, end_date)
+        bhxh = self.get_bhxh()
+        return salary + commission - bhxh
 
     def __str__(self):
         return self.full_name or self.user.username
+
+class UserContract(models.Model):
+    employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
+    customer_name = models.CharField(max_length=100)
+    customer_phone = models.CharField(max_length=15)
+    contract = models.ForeignKey(Contract, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.customer_name} - {self.contract.name}"
+
+class Plan(models.Model):
+    employee = models.ForeignKey(Employee, on_delete=models.CASCADE, related_name='plans')
+    kpi = models.IntegerField(
+        validators=[MinValueValidator(0)],
+        help_text="Giá trị KPI (số nguyên)",
+        default=0
+    )
+    start_date = models.DateField()
+    end_date = models.DateField()
+    status = models.CharField(
+        max_length=20,
+        choices=[('pending', 'Chờ xử lý'), ('in_progress', 'Đang thực hiện'), ('completed', 'Hoàn thành'), ('ended', 'Kết thúc')],
+        default='pending'
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"Plan for {self.employee.user.username} ({self.start_date} to {self.end_date})"

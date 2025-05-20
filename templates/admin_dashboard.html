@@ -90,44 +90,53 @@
     <p class="mb-4">Chào mừng đến với bảng điều khiển quản lý nhân sự.</p>
 
     <!-- Cards thống kê -->
-    <div class="row g-4">
-        <div class="col-md-3">
-            <a href="{% url 'admin_user' %}" class="card text-white bg-primary card-hover d-block">
-                <div class="card-body">
-                    <h5 class="card-title">Nhân viên</h5>
-                    <p class="card-text fs-4">{{ employee_count }}</p>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-3">
-            <a href="{% url 'admin_department' %}" class="card text-white bg-success card-hover d-block">
-                <div class="card-body">
-                    <h5 class="card-title">Phòng ban</h5>
-                    <p class="card-text fs-4">{{ department_count }}</p>
-                </div>
-            </a>
-        </div>
-        {% if user.is_superuser %}
-        <div class="col-md-3">
-            <a href="{% url 'contract_list' %}" class="card text-white bg-warning card-hover d-block">
-                <div class="card-body">
-                    <h5 class="card-title">Hợp đồng</h5>
-                    <p class="card-text fs-4">{{ contract_count }}</p>
-                </div>
-            </a>
-        </div>
-        {% endif %}
-        <div class="col-md-3">
-            <a href="{% url 'salary' %}" class="card text-white bg-danger card-hover">
-                <div class="card-body">
-                    <h5 class="card-title">Tổng lương</h5>
-                    <p class="card-text fs-4">
-                        {{ total_salary|floatformat:0|intcomma }} VND
-                    </p>                    
-                </div>
-            </a>
-        </div>
+<!-- Cards thống kê -->
+<div class="row g-4">
+    <!-- Phòng ban -->
+    <div class="col-md-3">
+        <a href="{% url 'admin_department' %}" class="card text-white bg-success card-hover d-block">
+            <div class="card-body">
+                <h5 class="card-title">Phòng ban</h5>
+                <p class="card-text fs-4">{{ department_count }}</p>
+            </div>
+        </a>
     </div>
+
+    <!-- Nhân viên -->
+    <div class="col-md-3">
+        <a href="{% url 'admin_user' %}" class="card text-white bg-primary card-hover d-block">
+            <div class="card-body">
+                <h5 class="card-title">Nhân viên</h5>
+                <p class="card-text fs-4">{{ employee_count }}</p>
+            </div>
+        </a>
+    </div>
+
+    <!-- Hợp đồng -->
+    {% if user.is_superuser %}
+    <div class="col-md-3">
+        <a href="{% url 'contract_list' %}" class="card text-white bg-warning card-hover d-block">
+            <div class="card-body">
+                <h5 class="card-title">Hợp đồng</h5>
+                <p class="card-text fs-4">{{ contract_count }}</p>
+            </div>
+        </a>
+    </div>
+    {% endif %}
+
+    <!-- Tổng lương -->
+    <div class="col-md-3">
+        <a href="{% url 'salary' %}" class="card text-white bg-danger card-hover">
+            <div class="card-body">
+                <h5 class="card-title">Tổng lương</h5>
+                <p class="card-text fs-4">
+                    {{ total_salary|floatformat:0|intcomma }} VND
+                </p>                    
+            </div>
+        </a>
+    </div>
+</div>
+
 
     <!-- Biểu đồ và Thông báo -->
     <div class="row mt-5">

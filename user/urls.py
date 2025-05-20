@@ -7,6 +7,7 @@ urlpatterns = [
     path('admin_dashboard/', views.admin_dashboard, name='admin_dashboard'),  # Trang admin
     path('admin_user/', views.admin_user, name='admin_user'),  # Quản lý nhân viên
     path('admin_department/', views.admin_department, name='admin_department'),  # Quản lý phòng ban
+    path('admin_employee_plan/<int:user_id>/', views.admin_employee_plan, name='admin_employee_plan'),
     path('home/', views.home, name='home'),  # Trang nhân viên
     path('dashboard/employee/<int:user_id>/', views.admin_employee_details, name='admin_employee_details'),
     path('edit_profile/', views.edit_profile, name='edit_profile'),

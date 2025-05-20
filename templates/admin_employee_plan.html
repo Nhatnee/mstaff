@@ -1,0 +1,341 @@
+{% load humanize %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý Kế hoạch - {{ employee.user.username }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap & Google Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .card {
+            border: none;
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.05);
+        }
+
+        table th {
+            background-color: #0d6efd;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn-sm {
+            padding: 0.25rem 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .navbar .nav-link.active {
+            font-weight: bold;
+            color: #000000 !important;
+        }
+
+        .action-buttons form, .action-buttons a {
+            display: inline-block;
+            margin-right: 0.25rem;
+        }
+
+        .form-control:invalid {
+            border-color: #dc3545;
+        }
+
+        .status-pending {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .status-in-progress {
+            color: #ffc107;
+            font-weight: bold;
+        }
+
+        .status-completed {
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'admin_dashboard' %}">💼 m_staff</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="{% url 'admin_dashboard' %}">Trang chủ</a></li>
+                <li class="nav-item"><a class="nav-link active fw-bold" href="{% url 'admin_user' %}">Nhân viên</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'admin_department' %}">Phòng ban</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'contract_list' %}">Hợp đồng</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'salary' %}">Lương</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Đăng xuất</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container mt-5">
+    <h2 class="mb-4">📅 Quản lý Kế hoạch - {{ employee.user.username }}</h2>
+
+    <!-- Thông báo -->
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert {% if message.tags == 'success' %}alert-success{% else %}alert-danger{% endif %}" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <!-- Form to Add Plan -->
+    <div class="card p-4 mb-4">
+        <h5>Thêm Kế hoạch mới</h5>
+        <form method="POST" novalidate>
+            {% csrf_token %}
+            <input type="hidden" name="employee_id" value="{{ employee.id }}">
+            <div class="mb-3">
+                <label for="description" class="form-label">Kế hoạch <span class="text-danger">*</span></label>
+                <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+                <div class="invalid-feedback">
+                    Vui lòng nhập kế hoạch.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="start_date" class="form-label">Ngày bắt đầu <span class="text-danger">*</span></label>
+                    <input type="date" class="form-control" id="start_date" name="start_date" required>
+                    <div class="invalid-feedback">
+                        Vui lòng chọn ngày bắt đầu.
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="end_date" class="form-label">Ngày kết thúc <span class="text-danger">*</span></label>
+                    <input type="date" class="form-control" id="end_date" name="end_date" required>
+                    <div class="invalid-feedback">
+                        Vui lòng chọn ngày kết thúc.
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="status" class="form-label">Trạng thái <span class="text-danger">*</span></label>
+                    <select class="form-control" id="status" name="status" required>
+                        <option value="pending">Chờ xử lý</option>
+                        <option value="in_progress">Đang thực hiện</option>
+                        <option value="completed">Hoàn thành</option>
+                        <option value="ended">Kết thúc</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Vui lòng chọn trạng thái.
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" name="add_plan">
+                Thêm Kế hoạch
+            </button>
+        </form>
+    </div>
+
+    <!-- List of Plans -->
+    <div class="card p-4">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover align-middle" id="planTable">
+                <thead>
+                    <tr>
+                        <th>Mục tiêu</th>
+                        <th onclick="sortTable(1)">Ngày bắt đầu <i class="fas fa-sort"></i></th>
+                        <th>Ngày kết thúc</th>
+                        <th onclick="sortTable(3)">Trạng thái <i class="fas fa-sort"></i></th>
+                        <th class="text-center">Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for plan in plans %}
+                        <tr>
+                            <td>{{ plan.kpi }}</td>
+                            <td>{{ plan.start_date|date:"d/m/Y" }}</td>
+                            <td>{{ plan.end_date|date:"d/m/Y" }}</td>
+                            <td>
+                                <span class="status-{% if plan.status == 'pending' %}pending{% elif plan.status == 'in_progress' %}in-progress{% else %}completed{% endif %}">
+                                    {% if plan.status == 'pending' %}Chờ xử lý
+                                    {% elif plan.status == 'in_progress' %}Đang thực hiện
+                                    {% elif plan.status == 'ended' %}Kết thúc
+                                    {% else %}Hoàn thành{% endif %}
+                                </span>
+                            </td>
+                            <td class="text-center action-buttons">
+                                <!-- Edit Plan -->
+                                <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editPlanModal{{ plan.id }}" title="Sửa kế hoạch">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <!-- Delete Plan -->
+                                <form method="POST" style="display:inline;" onsubmit="return confirm('Bạn có chắc chắn muốn xóa kế hoạch này?');">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="delete_plan" value="1">
+                                    <input type="hidden" name="plan_id" value="{{ plan.id }}">
+                                    <button type="submit" class="btn btn-sm btn-danger" title="Xóa kế hoạch">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+
+                        <!-- Edit Plan Modal -->
+                        <div class="modal fade" id="editPlanModal{{ plan.id }}" tabindex="-1" aria-labelledby="editPlanModalLabel{{ plan.id }}" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="editPlanModalLabel{{ plan.id }}">Sửa Kế hoạch</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form method="POST" novalidate>
+                                            {% csrf_token %}
+                                            <input type="hidden" name="edit_plan" value="1">
+                                            <input type="hidden" name="plan_id" value="{{ plan.id }}">
+                                            <div class="mb-3">
+                                                <label for="description_{{ plan.id }}" class="form-label">Kế hoạch <span class="text-danger">*</span></label>
+                                                <textarea class="form-control" id="description_{{ plan.id }}" name="description" rows="3" required>{{ plan.kpi }}</textarea>
+                                                <div class="invalid-feedback">
+                                                    Vui lòng nhập mô tả kế hoạch.
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4 mb-3">
+                                                    <label for="start_date_{{ plan.id }}" class="form-label">Ngày bắt đầu <span class="text-danger">*</span></label>
+                                                    <input type="date" class="form-control" id="start_date_{{ plan.id }}" name="start_date" value="{{ plan.start_date|date:'Y-m-d' }}" required>
+                                                    <div class="invalid-feedback">
+                                                        Vui lòng chọn ngày bắt đầu.
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 mb-3">
+                                                    <label for="end_date_{{ plan.id }}" class="form-label">Ngày kết thúc <span class="text-danger">*</span></label>
+                                                    <input type="date" class="form-control" id="end_date_{{ plan.id }}" name="end_date" value="{{ plan.end_date|date:'Y-m-d' }}" required>
+                                                    <div class="invalid-feedback">
+                                                        Vui lòng chọn ngày kết thúc.
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 mb-3">
+                                                    <label for="status_{{ plan.id }}" class="form-label">Trạng thái <span class="text-danger">*</span></label>
+                                                    <select class="form-control" id="status_{{ plan.id }}" name="status" required>
+                                                        <option value="pending" {% if plan.status == 'pending' %}selected{% endif %}>Chờ xử lý</option>
+                                                        <option value="in_progress" {% if plan.status == 'in_progress' %}selected{% endif %}>Đang thực hiện</option>
+                                                        <option value="completed" {% if plan.status == 'completed' %}selected{% endif %}>Hoàn thành</option>
+                                                        <option value="ended" {% if plan.status == 'ended' %}selected{% endif %}>Kết thúc</option>
+                                                    </select>
+                                                    <div class="invalid-feedback">
+                                                        Vui lòng chọn trạng thái.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">
+                                                <i class="fas fa-save me-1"></i> Lưu
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% empty %}
+                        <tr>
+                            <td colspan="5" class="text-center text-muted">Chưa có kế hoạch nào.</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Back Button -->
+    <div class="mt-4">
+        <a href="{% url 'admin_user' %}" class="btn btn-secondary">
+            <i class="fas fa-arrow-left me-1"></i> Quay lại danh sách nhân viên
+        </a>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+<script>
+    // Client-side form validation
+    (function () {
+        'use strict';
+        const forms = document.querySelectorAll('form[novalidate]');
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
+
+    // Table sorting function
+    function sortTable(columnIndex) {
+        const table = document.getElementById("planTable");
+        let switching = true;
+        let shouldSwitch, i, dir = "asc", switchcount = 0;
+        while (switching) {
+            switching = false;
+            const rows = table.rows;
+            for (i = 1; i < (rows.length - 1); i++) {
+                shouldSwitch = false;
+                const x = rows[i].getElementsByTagName("TD")[columnIndex];
+                const y = rows[i + 1].getElementsByTagName("TD")[columnIndex];
+                let cmpX = x.innerHTML.toLowerCase();
+                let cmpY = y.innerHTML.toLowerCase();
+                if (columnIndex === 1) { // Sort by date
+                    const dateX = new Date(cmpX.split('/').reverse().join('-'));
+                    const dateY = new Date(cmpY.split('/').reverse().join('-'));
+                    cmpX = dateX;
+                    cmpY = dateY;
+                }
+                if (dir === "asc") {
+                    if (cmpX > cmpY) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                } else if (dir === "desc") {
+                    if (cmpX < cmpY) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+            }
+            if (shouldSwitch) {
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                switchcount++;
+            } else {
+                if (switchcount === 0 && dir === "asc") {
+                    dir = "desc";
+                    switching = true;
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
+{% endblock %}

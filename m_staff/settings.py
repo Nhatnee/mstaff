@@ -25,9 +25,9 @@ SECRET_KEY = 'django-insecure-d(6%f16nek=$*fu(!+&2qf8g%i9@s0i!q01ly!+^d7$68atk-)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mstaff.onrender.com']
+# ALLOWED_HOSTS = ['mstaff.onrender.com']
 
-
+ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'user',
     'department',
-    'kpi',
+    'contract',
     'announcements',
 ]
 
@@ -76,20 +76,29 @@ WSGI_APPLICATION = 'm_staff.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mstaff',
-        'USER': 'mstaff_user',
-        'PASSWORD': 'ZjB1l047RjW057fj4LJeY30er250ZMRh',
-        'HOST': 'dpg-d094lhjipnbc73e114k0-a.singapore-postgres.render.com',
-        'PORT': '5432',
-        'OPTIONS': {
-            'sslmode': 'require',
-        }
-    }
+        'USER': 'root',
+        'PASSWORD': '12345678',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    },
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'mstaff',
+#         'USER': 'mstaff_user',
+#         'PASSWORD': 'ZjB1l047RjW057fj4LJeY30er250ZMRh',
+#         'HOST': 'dpg-d094lhjipnbc73e114k0-a.singapore-postgres.render.com',
+#         'PORT': '5432',
+#         'OPTIONS': {
+#             'sslmode': 'require',
+#         }
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -134,3 +143,23 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = '/'  
 LOGIN_REDIRECT_URL = 'home'  # Chuyển hướng đến trang home sau khi đăng nhập
 LOGOUT_REDIRECT_URL = '/'  # Chuyển hướng về login sau khi đăng xuất
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': 'debug.log',
+        },
+    },
+    'loggers': {
+        '': {
+            'handlers': ['console', 'file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    },
+}

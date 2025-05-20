@@ -1,0 +1,2275 @@
+Watching for file changes with StatReloader
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+User Contracts: [<UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>]
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+User Contracts: [<UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>]
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+User Contracts: []
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+User Contracts: []
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+User Contracts: []
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+User Contracts: []
+POST data: <QueryDict: {'csrfmiddlewaretoken': ['r1gCzcTKQ6uazx3cCKicr8oIqTmwlYy4PUERKR0yk6Qxt4kxSvcumRjJ0fVFvxTH'], 'contract': ['3'], 'create_contract': ['1'], 'customer_name': ['Lê Tú'], 'customer_phone': ['0987654321']}>
+Created contract Loa thần tài for employee None
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+User Contracts: [<UserContract: Lê Tú - Loa thần tài>]
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+User Contracts: [<UserContract: Lê Tú - Loa thần tài>]
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+User Contracts: [<UserContract: Lê Tú - Loa thần tài>]
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+User Contracts: [<UserContract: Lê Tú - Loa thần tài>]
+POST data: <QueryDict: {'csrfmiddlewaretoken': ['UsublMS3Th0IGDr9hiMtFzPm5r6ikqQ1ilSqwrZRnhm5AaIux3GLAiKnFNFruZbE'], 'contract': ['3'], 'create_contract': ['1'], 'customer_name': ['Tú ne'], 'customer_phone': ['0987654321']}>
+Created contract Loa thần tài for employee None
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+User Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Lê Tú - Loa thần tài>]
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+User Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Lê Tú - Loa thần tài>]
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+User Contracts: [<UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>]
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>]
+Commission this month: 50000.00
+Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 337, in home
+    return render(request, 'dashboard.html', {  # Updated to match template name
+        'user': request.user,
+    ...<5 lines>...
+        'created_contracts': created_contracts,  # Renamed from user_contracts
+    })
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: dashboard.html
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>]
+Commission this month: 50000.00
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>]
+Commission this month: 50000.00
+POST data: <QueryDict: {'csrfmiddlewaretoken': ['JUJB5zr61bjpHQ1yN18Myyctg5YcrAPqOj79OaRSPqFxH3LuiJ2VCJ6oWjjkTR65'], 'contract': ['3'], 'create_contract': ['1'], 'customer_name': ['Tú ne'], 'customer_phone': ['0987654321']}>
+Created contract Loa thần tài for employee NV001
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>]
+Commission this month: 75000.00
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>]
+Commission this month: 75000.00
+POST data: <QueryDict: {'csrfmiddlewaretoken': ['vwvHnVQdDNJt1d6YbxsEnL31pS7qCLTAAVTf6wgZr25B1qQUGfmNrWXW56sy42af'], 'contract': ['4'], 'create_contract': ['1'], 'customer_name': ['Tú1'], 'customer_phone': ['0987654321']}>
+Created contract eContract_200 for employee NV001
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>]
+Commission this month: 135000.00
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>]
+Commission this month: 135000.00
+Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 337, in home
+    return render(request, 'user_home.html', {  # Updated to match template name
+        'user': request.user,
+    ...<5 lines>...
+        'created_contracts': created_contracts,  # Renamed from user_contracts
+    })
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+        (
+    ...<2 lines>...
+        )
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 489, in parse
+    raise self.error(token, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 706, in __init__
+    raise TemplateSyntaxError(
+    ...<2 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: 'd/m/Y H:i"' from 'announcement.created_at|date:"d/m/Y H:i perspective API is not certified for use in the European Union or California. |date:"d/m/Y H:i"'
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>]
+Commission this month: 135000.00
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>]
+Commission this month: 135000.00
+Internal Server Error: /home/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'else'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 337, in home
+    return render(request, 'user_home.html', {  # Updated to match template name
+        'user': request.user,
+    ...<5 lines>...
+        'created_contracts': created_contracts,  # Renamed from user_contracts
+    })
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 976, in do_if
+    nodelist = parser.parse(("endif",))
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 563, in invalid_block_tag
+    raise self.error(
+    ...<8 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 454: 'else', expected 'endif'. Did you forget to register or load this tag?
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>]
+Commission this month: 135000.00
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>]
+Commission this month: 135000.00
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>]
+Commission this month: 135000.00
+Internal Server Error: /salary-history/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 452, in salary_history
+    commission = employee.get_total_commission(month['start_date'], month['end_date'])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Employee' object has no attribute 'get_total_commission'
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>]
+Commission this month: 135000.00
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>]
+Commission this month: 135000.00
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>]
+Commission this month: 135000.00
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>]
+Commission this month: 135000.00
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>]
+Commission this month: 135000.00
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>]
+Commission this month: 135000.00
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>]
+Commission this month: 135000.00
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>]
+Commission this month: 135000.00
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>]
+Commission this month: 135000.00
+POST data: <QueryDict: {'csrfmiddlewaretoken': ['dMGPC5lStlFMQYwWvlbozHLZh5keY5rI0gt0XlFnp34s2nvHqyrlLczRaMSk60yg'], 'contract': ['5'], 'create_contract': ['1'], 'customer_name': ['quỳnh'], 'customer_phone': ['0987654321']}>
+Created contract eContract_500 for employee NV001
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>, <UserContract: quỳnh - eContract_500>]
+Commission this month: 255000.00
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>, <UserContract: quỳnh - eContract_500>]
+Commission this month: 255000.00
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>, <UserContract: quỳnh - eContract_500>]
+Commission this month: 255000.00
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>, <UserContract: quỳnh - eContract_500>]
+Commission this month: 255000.00
+POST data: <QueryDict: {'csrfmiddlewaretoken': ['C6VxHQbgJXPBZsD00RzBJVM1nEWYuCy8pAII26vLFFehbRCLV4PyVqATglu4CxFG'], 'contract': [''], 'created_contract_id': ['6'], 'action': ['edit'], 'customer_name': ['Tú2'], 'customer_phone': ['0987654321']}>
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>, <UserContract: quỳnh - eContract_500>]
+Commission this month: 255000.00
+POST data: <QueryDict: {'csrfmiddlewaretoken': ['oi0ZdiDfnjZF0XX7RTx00e4BhgFJxO1ebMNayyXKj1olcmWSM6NXcJStaXdPFJ8M'], 'contract': [''], 'created_contract_id': ['5'], 'action': ['edit'], 'customer_name': ['Tú ne'], 'customer_phone': ['0987654323']}>
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>, <UserContract: quỳnh - eContract_500>]
+Commission this month: 255000.00
+POST data: <QueryDict: {'csrfmiddlewaretoken': ['hULRyyxPpV5XDxyo4Jc0NbZlJqb2Tsiq4oy2TORklDuDPWx9ZWsXZGNdC7J81npY'], 'contract': ['3'], 'created_contract_id': [''], 'action': ['create'], 'customer_name': ['đông'], 'customer_phone': ['0123456789']}>
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>, <UserContract: quỳnh - eContract_500>]
+Commission this month: 255000.00
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú ne - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú1 - eContract_200>, <UserContract: quỳnh - eContract_500>]
+Commission this month: 255000.00
+POST data: <QueryDict: {'csrfmiddlewaretoken': ['I0KMKLRfAbf1muFBzVB8DvZAJ5yJvZSoPDCO8jlBnMVjPU0YTEd4ZAHGubFRCDgQ'], 'contract': ['3'], 'created_contract_id': [''], 'action': ['create'], 'customer_name': ['đông'], 'customer_phone': ['0123456789']}>
+Created contract Loa thần tài for employee NV001
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: Tú1 - eContract_200>, <UserContract: quỳnh - eContract_500>]
+Commission this month: 280000.00
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: Tú1 - eContract_200>, <UserContract: quỳnh - eContract_500>]
+Commission this month: 280000.00
+POST data: <QueryDict: {'csrfmiddlewaretoken': ['fQD2N5JBedGtJeA4qRqqMkNEpslSIvFCmtv4bDdX1OmLcEVrKA2m8pvKays0P934'], 'contract': [''], 'created_contract_id': ['8'], 'action': ['edit'], 'customer_name': ['Đồng'], 'customer_phone': ['0123456789']}>
+Updated contract Loa thần tài for employee NV001
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: Đồng - Loa thần tài>, <UserContract: Tú1 - eContract_200>, <UserContract: quỳnh - eContract_500>]
+Commission this month: 280000.00
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: Đồng - Loa thần tài>, <UserContract: Tú1 - eContract_200>, <UserContract: quỳnh - eContract_500>]
+Commission this month: 280000.00
+Internal Server Error: /contract/contracts/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/xuannhat/m_staff 2 /contract/views.py", line 8, in contract_list
+    return render(request, 'contract/contract_list.html', {'contracts': contracts})
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'contract_detail' not found. 'contract_detail' is not a valid view function or pattern name.
+/Users/xuannhat/m_staff 2 /contract/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /contract/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /contract/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /contract/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /contract/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /contract/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /contract/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Viewing details for contract Loa thần tài (ID: 3)
+Found 6 user contracts
+Internal Server Error: /contract/contracts/detail/3/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /contract/views.py", line 54, in contract_detail
+    return render(request, 'contract/contract_detail.html', {
+        'contract': contract,
+        'user_contracts': user_contracts,
+    })
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: contract/contract_detail.html
+Viewing details for contract Loa thần tài (ID: 3)
+Found 6 user contracts
+Viewing details for contract eContract_200 (ID: 4)
+Found 1 user contracts
+Viewing details for contract eContract_500 (ID: 5)
+Found 1 user contracts
+Viewing details for contract Loa thần tài (ID: 3)
+Found 6 user contracts
+Viewing details for contract Loa thần tài (ID: 3)
+Found 6 user contracts
+Viewing details for contract eContract_500 (ID: 5)
+Found 1 user contracts
+Viewing details for contract Loa thần tài (ID: 3)
+Found 6 user contracts
+Viewing details for contract Loa thần tài (ID: 3)
+Found 6 user contracts
+Viewing details for contract Loa thần tài (ID: 3)
+Found 6 user contracts
+Internal Server Error: /contract/contracts/detail/3/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+TypeError: 'Employee' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Employee' object has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+                      ~~~^^^^^
+ValueError: invalid literal for int() with base 10: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /contract/views.py", line 54, in contract_detail
+    return render(request, 'contract/contract_detail.html', {
+        'contract': contract,
+        'user_contracts': user_contracts,
+    })
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1067, in render
+    output = self.filter_expression.resolve(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 739, in resolve
+    arg_vals.append(arg.resolve(context))
+                    ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )  # missing attribute
+    ^
+django.template.base.VariableDoesNotExist: Failed lookup for key [username] in <Employee: None>
+/Users/xuannhat/m_staff 2 /contract/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /contract/contracts/detail/3/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: contract_detail() got an unexpected keyword argument 'pk'
+/Users/xuannhat/m_staff 2 /contract/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /contract/contracts/detail/3/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: contract_detail() got an unexpected keyword argument 'pk'
+Internal Server Error: /contract/contracts/detail/3/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: contract_detail() got an unexpected keyword argument 'pk'
+Internal Server Error: /contract/contracts/detail/3/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: contract_detail() got an unexpected keyword argument 'pk'
+Internal Server Error: /contract/contracts/detail/3/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: contract_detail() got an unexpected keyword argument 'pk'
+Internal Server Error: /contract/contracts/detail/3/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: contract_detail() got an unexpected keyword argument 'pk'
+/Users/xuannhat/m_staff 2 /contract/models.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /contract/models.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /contract/contracts/detail/3/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: contract_detail() got an unexpected keyword argument 'pk'
+/Users/xuannhat/m_staff 2 /contract/views.py changed, reloading.
+Watching for file changes with StatReloader
+Viewing details for contract Loa thần tài (ID: 3)
+Found 6 user contracts
+Internal Server Error: /contract/contracts/detail/3/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+TypeError: 'Employee' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Employee' object has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+                      ~~~^^^^^
+ValueError: invalid literal for int() with base 10: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /contract/views.py", line 54, in contract_detail
+    return render(request, 'contract/contract_detail.html', {
+        'contract': contract,
+        'user_contracts': user_contracts,
+    })
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1067, in render
+    output = self.filter_expression.resolve(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 739, in resolve
+    arg_vals.append(arg.resolve(context))
+                    ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 850, in resolve
+    value = self._resolve_lookup(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )  # missing attribute
+    ^
+django.template.base.VariableDoesNotExist: Failed lookup for key [username] in <Employee: None>
+Viewing details for contract Loa thần tài (ID: 3)
+Found 6 user contracts
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Tú - Loa thần tài>, <UserContract: Tú - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: Đồng - Loa thần tài>, <UserContract: Tú1 - eContract_200>, <UserContract: quỳnh - eContract_500>]
+Commission this month: 280000.00
+Viewing details for contract Loa thần tài (ID: 3)
+Found 6 user contracts
+/Users/xuannhat/m_staff 2 /contract/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /contract/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /contract/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /contract/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /contract/contracts/detail/3/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /contract/views.py", line 50, in contract_detail
+    employee = User.object
+               ^^^^
+NameError: name 'User' is not defined
+/Users/xuannhat/m_staff 2 /contract/views.py changed, reloading.
+Watching for file changes with StatReloader
+Viewing details for contract Loa thần tài (ID: 3)
+Found 6 user contracts
+/Users/xuannhat/m_staff 2 /contract/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /contract/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /contract/views.py changed, reloading.
+Watching for file changes with StatReloader
+Viewing details for contract Loa thần tài (ID: 3)
+Found 6 user contracts
+Viewing details for contract Loa thần tài (ID: 3)
+Found 6 user contracts
+Viewing details for contract Loa thần tài (ID: 3)
+Found 6 user contracts
+Internal Server Error: /admin_user/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 95, in admin_user
+    return render(request, 'admin_user.html', {
+        'users': users,
+        'user_profiles': user_profiles
+    })
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'admin_employee_plan' not found. 'admin_employee_plan' is not a valid view function or pattern name.
+Internal Server Error: /admin_user/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 95, in admin_user
+    return render(request, 'admin_user.html', {
+        'users': users,
+        'user_profiles': user_profiles
+    })
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'admin_employee_plan' not found. 'admin_employee_plan' is not a valid view function or pattern name.
+Internal Server Error: /admin_user/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 95, in admin_user
+    return render(request, 'admin_user.html', {
+        'users': users,
+        'user_profiles': user_profiles
+    })
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'admin_employee_plan' not found. 'admin_employee_plan' is not a valid view function or pattern name.
+Internal Server Error: /admin_user/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 95, in admin_user
+    return render(request, 'admin_user.html', {
+        'users': users,
+        'user_profiles': user_profiles
+    })
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'admin_employee_plan' not found. 'admin_employee_plan' is not a valid view function or pattern name.
+Internal Server Error: /admin_user/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 95, in admin_user
+    return render(request, 'admin_user.html', {
+        'users': users,
+        'user_profiles': user_profiles
+    })
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'admin_employee_plan' not found. 'admin_employee_plan' is not a valid view function or pattern name.
+Internal Server Error: /admin_user/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 95, in admin_user
+    return render(request, 'admin_user.html', {
+        'users': users,
+        'user_profiles': user_profiles
+    })
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader_tags.py", line 56, in render
+    result = self.nodelist.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 243, in render
+    nodelist.append(node.render_annotated(context))
+                    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'admin_employee_plan' not found. 'admin_employee_plan' is not a valid view function or pattern name.
+/Users/xuannhat/m_staff 2 /user/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/models.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/models.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /admin/employee/2/plan/
+Not Found: /admin/employee/2/plan/
+Not Found: /admin/employee/2/plan/
+Not Found: /admin/employee/2/plan/
+Not Found: /admin/employee/2/plan/
+Not Found: /admin/employee/2/plan/
+Not Found: /admin/employee/2/plan/
+Not Found: /admin/employee/2/plan/
+/Users/xuannhat/m_staff 2 /user/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /admin/employee/2/plan/
+Not Found: /admin/employee/2/plan/
+/Users/xuannhat/m_staff 2 /user/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /admin_employee_plan/2/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 457, in admin_employee_plan
+    employee = get_object_or_404(Employee, user=user)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/shortcuts.py", line 86, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 635, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1609, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1641, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1555, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1385, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 158, in get_prep_lookup
+    return super().get_prep_lookup()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/lookups.py", line 365, in get_prep_lookup
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The QuerySet value for an exact lookup must be limited to one result using slicing.
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /admin_employee_plan/2/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 457, in admin_employee_plan
+    employee = get_object_or_404(Employee, user=user)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/shortcuts.py", line 86, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 635, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1609, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+                ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1641, in _add_q
+    child_clause, needed_inner = self.build_filter(
+                                 ~~~~~~~~~~~~~~~~~^
+        child,
+        ^^^^^^
+    ...<7 lines>...
+        update_join_types=update_join_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1555, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/sql/query.py", line 1385, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/lookups.py", line 30, in __init__
+    self.rhs = self.get_prep_lookup()
+               ~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/fields/related_lookups.py", line 158, in get_prep_lookup
+    return super().get_prep_lookup()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/lookups.py", line 365, in get_prep_lookup
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The QuerySet value for an exact lookup must be limited to one result using slicing.
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>]
+Commission this month: 50000.00
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>]
+Commission this month: 50000.00
+/Users/xuannhat/m_staff 2 /user/models.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/models.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/models.py changed, reloading.
+Watching for file changes with StatReloader
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>]
+Commission this month: 50000.00
+/Users/xuannhat/m_staff 2 /user/migrations/0015_plan.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>]
+Commission this month: 50000.00
+Current Plan: None
+KPI Target: 0, KPI Achieved: 50000.00, KPI Percentage: 0%
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>]
+Commission this month: 50000.00
+Current Plan: None
+KPI Target: 0, KPI Achieved: 50000.00, KPI Percentage: 0%
+Internal Server Error: /admin_employee_plan/2/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 495, in admin_employee_plan
+    Plan.objects.create(
+    ~~~~~~~~~~~~~~~~~~~^
+        employee=employee,
+        ^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        status=status
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 677, in create
+    obj = self.model(**kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/base.py", line 567, in __init__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: Plan() got unexpected keyword arguments: 'description'
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /admin_employee_plan/2/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 495, in admin_employee_plan
+    Plan.objects.create(
+    ~~~~~~~~~~~~~~~~~~~^
+        employee=employee,
+        ^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        status=status
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 677, in create
+    obj = self.model(**kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/base.py", line 567, in __init__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: Plan() got unexpected keyword arguments: 'description'
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>]
+Commission this month: 50000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 20000000, KPI Achieved: 50000.00, KPI Percentage: 0.2500%
+/Users/xuannhat/m_staff 2 /user/models.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>]
+Commission this month: 50000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 20000000, KPI Achieved: 50000.00, KPI Percentage: 0.2500%, Status: in_progress
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>]
+Commission this month: 50000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 50000, KPI Achieved: 50000.00, KPI Percentage: 100.00%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>]
+Commission this month: 50000.00
+Current Plan: None
+KPI Target: 0, KPI Achieved: 50000.00, KPI Percentage: 0%, Status: No plan
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>]
+Commission this month: 50000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 50000.00, KPI Percentage: 71.42857142857142857142857143%, Status: in_progress
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>]
+Commission this month: 50000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 50000.00, KPI Percentage: 71.42857142857142857142857143%, Status: in_progress
+POST data: <QueryDict: {'csrfmiddlewaretoken': ['8ZzIWVS4IbSxYymBhYiaNzCFIzLNeMku5v7H13aTnb6Iahbn9bGxnSmWSdbDmn4e'], 'contract': ['3'], 'created_contract_id': [''], 'action': ['create'], 'customer_name': ['đông'], 'customer_phone': ['0123456789']}>
+Created contract Loa thần tài for employee None
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>]
+Commission this month: 75000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 75000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>]
+Commission this month: 75000.00
+Current Plan: None
+KPI Target: 0, KPI Achieved: 75000.00, KPI Percentage: 0%, Status: No plan
+POST data: <QueryDict: {'csrfmiddlewaretoken': ['0zBqU1o2naRBgbE0oqoKjpN9rZ3KdZA4X59pZ9GR2a5MsUtMgDM7TIxqBDtAlAkO'], 'contract': [''], 'created_contract_id': ['3'], 'action': ['edit'], 'customer_name': ['Lê Tú m'], 'customer_phone': ['0987654321']}>
+Updated contract Loa thần tài for employee None
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>]
+Commission this month: 75000.00
+Current Plan: None
+KPI Target: 0, KPI Achieved: 75000.00, KPI Percentage: 0%, Status: No plan
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>]
+Commission this month: 75000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 75000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>]
+Commission this month: 75000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 75000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>]
+Commission this month: 75000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 75000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>]
+Commission this month: 75000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 75000.00, KPI Percentage: 100%, Status: completed
+POST data: <QueryDict: {'csrfmiddlewaretoken': ['6KIskZIUSdwarC8HznPmasoRGmtrlYQSSNzrSRF7hvjMwzb5Vac1Q0skdtea27ge'], 'contract': ['4'], 'created_contract_id': [''], 'action': ['create'], 'customer_name': ['nhàn'], 'customer_phone': ['0123456789']}>
+Created contract eContract_200 for employee None
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Internal Server Error: /salary/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 394, in admin_salary
+    bonus = emp.get_total_commission()
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Employee' object has no attribute 'get_total_commission'
+Internal Server Error: /salary/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 394, in admin_salary
+    bonus = emp.get_total_commission()
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Employee' object has no attribute 'get_total_commission'
+Internal Server Error: /salary/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 394, in admin_salary
+    bonus = emp.get_total_commission()
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Employee' object has no attribute 'get_total_commission'
+Internal Server Error: /salary/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 394, in admin_salary
+    bonus = emp.get_total_commission()
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Employee' object has no attribute 'get_total_commission'
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /salary/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 402, in admin_salary
+    employee.total_commission = employee.get_total_commission(start_date, end_date)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Employee' object has no attribute 'get_total_commission'
+Internal Server Error: /salary/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 402, in admin_salary
+    employee.total_commission = employee.get_total_commission(start_date, end_date)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Employee' object has no attribute 'get_total_commission'
+/Users/xuannhat/m_staff 2 /user/models.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/models.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/models.py changed, reloading.
+Watching for file changes with StatReloader
+Viewing details for contract Loa thần tài (ID: 3)
+Found 7 user contracts
+Viewing details for contract Loa thần tài (ID: 3)
+Found 7 user contracts
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Viewing details for contract Loa thần tài (ID: 3)
+Found 7 user contracts
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: []
+Commission this month: 0
+Current Plan: None
+KPI Target: 0, KPI Achieved: 0, KPI Percentage: 0%, Status: No plan
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: []
+Commission this month: 0
+Current Plan: None
+KPI Target: 0, KPI Achieved: 0, KPI Percentage: 0%, Status: No plan
+POST data: <QueryDict: {'csrfmiddlewaretoken': ['ILBfTc0glToPs9KceNkJJWVsldx484AeMrMiuARfY5WSiZiJ7xA1Y873riGCWuqD'], 'contract': ['4'], 'created_contract_id': [''], 'action': ['create'], 'customer_name': ['phước hữu'], 'customer_phone': ['0123456789']}>
+Created contract eContract_200 for employee NV002
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: phước hữu - eContract_200>]
+Commission this month: 60000.00
+Current Plan: None
+KPI Target: 0, KPI Achieved: 60000.00, KPI Percentage: 0%, Status: No plan
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: phước hữu - eContract_200>]
+Commission this month: 60000.00
+Current Plan: None
+KPI Target: 0, KPI Achieved: 60000.00, KPI Percentage: 0%, Status: No plan
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: phước hữu - eContract_200>]
+Commission this month: 60000.00
+Current Plan: Plan for phước (2025-05-01 to 2025-05-31)
+KPI Target: 200000, KPI Achieved: 60000.00, KPI Percentage: 30.00%, Status: in_progress
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: phước hữu - eContract_200>]
+Commission this month: 60000.00
+Current Plan: Plan for phước (2025-05-01 to 2025-05-31)
+KPI Target: 200000, KPI Achieved: 60000.00, KPI Percentage: 30.00%, Status: in_progress
+POST data: <QueryDict: {'csrfmiddlewaretoken': ['4WtGLwurGxXQQKNwT0JuOFURy4TV37ZNJLVVeIvxsOEju17zay6wLBgzm31ToOVW'], 'contract': ['3'], 'created_contract_id': [''], 'action': ['create'], 'customer_name': ['hiền lê'], 'customer_phone': ['0123456789']}>
+Created contract Loa thần tài for employee phước
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: phước hữu - eContract_200>, <UserContract: hiền lê - Loa thần tài>]
+Commission this month: 85000.00
+Current Plan: Plan for phước (2025-05-01 to 2025-05-31)
+KPI Target: 200000, KPI Achieved: 85000.00, KPI Percentage: 42.500%, Status: in_progress
+Viewing details for contract Loa thần tài (ID: 3)
+Found 8 user contracts
+Viewing details for contract eContract_200 (ID: 4)
+Found 3 user contracts
+Viewing details for contract eContract_500 (ID: 5)
+Found 1 user contracts
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Viewing details for contract Loa thần tài (ID: 3)
+Found 8 user contracts
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Watching for file changes with StatReloader
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Internal Server Error: /departmentadmin/department/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'empty'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/xuannhat/m_staff 2 /department/views.py", line 12, in admin_department
+    return render(request, 'admin/admin_department.html', {'departments': departments})
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 573, in invalid_block_tag
+    raise self.error(
+    ...<3 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 125: 'empty'. Did you forget to register or load this tag?
+Viewing details for contract Loa thần tài (ID: 3)
+Found 8 user contracts
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+/Users/xuannhat/m_staff 2 /user/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /admin_dashboard/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 192, in admin_dashboard
+    total_salary = sum(emp.get_total_salary() for emp in employees)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 192, in <genexpr>
+    total_salary = sum(emp.get_total_salary() for emp in employees)
+                       ~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/xuannhat/m_staff 2 /user/models.py", line 70, in get_total_salary
+    return ( salary * 0.105) + commission
+           ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+Forbidden (CSRF token from POST incorrect.): /
+/Users/xuannhat/m_staff 2 /user/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /admin_dashboard/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 192, in admin_dashboard
+    total_salary = sum(emp.get_total_salary() for emp in employees)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 192, in <genexpr>
+    total_salary = sum(emp.get_total_salary() for emp in employees)
+                       ~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/xuannhat/m_staff 2 /user/models.py", line 70, in get_total_salary
+    return ( salary * 0,105) + commission
+           ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+TypeError: can only concatenate tuple (not "decimal.Decimal") to tuple
+/Users/xuannhat/m_staff 2 /user/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+/Users/xuannhat/m_staff 2 /user/models.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /admin_dashboard/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 192, in admin_dashboard
+    total_salary = sum(emp.get_total_salary() for emp in employees)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 192, in <genexpr>
+    total_salary = sum(emp.get_total_salary() for emp in employees)
+                       ~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/xuannhat/m_staff 2 /user/models.py", line 71, in get_total_salary
+    return (salary * 0.105) + commission
+           ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~
+TypeError: unsupported operand type(s) for +: 'float' and 'decimal.Decimal'
+/Users/xuannhat/m_staff 2 /user/models.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/models.py changed, reloading.
+Watching for file changes with StatReloader
+Viewing details for contract Loa thần tài (ID: 3)
+Found 8 user contracts
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/models.py changed, reloading.
+Watching for file changes with StatReloader
+/Users/xuannhat/m_staff 2 /user/models.py changed, reloading.
+Watching for file changes with StatReloader
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú m - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+POST data: <QueryDict: {'csrfmiddlewaretoken': ['ZBQH2kewfO88x2xxSr3z7UNYgnFOkeDVRWBXRDswvkynNLdXT7e453lL3xqloiIi'], 'contract': [''], 'created_contract_id': ['3'], 'action': ['edit'], 'customer_name': ['Lê Tú '], 'customer_phone': ['0987654321']}>
+Updated contract Loa thần tài for employee None
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú  - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú  - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>]
+Commission this month: 135000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 135000.00, KPI Percentage: 100%, Status: completed
+POST data: <QueryDict: {'csrfmiddlewaretoken': ['wIgFjXcN2ErsKe7f9ebpNZpzoszvv5Ado31V8gqNiaRH0XNFaUmUL8XmbCk2z9FA'], 'contract': ['5'], 'created_contract_id': [''], 'action': ['create'], 'customer_name': ['Nhật'], 'customer_phone': ['0987654321']}>
+Created contract eContract_500 for employee None
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú  - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>, <UserContract: Nhật - eContract_500>]
+Commission this month: 255000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 255000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú  - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>, <UserContract: Nhật - eContract_500>]
+Commission this month: 255000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 255000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú  - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>, <UserContract: Nhật - eContract_500>]
+Commission this month: 255000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 255000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú  - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>, <UserContract: Nhật - eContract_500>]
+Commission this month: 255000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 255000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú  - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>, <UserContract: Nhật - eContract_500>]
+Commission this month: 255000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 255000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú  - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>, <UserContract: Nhật - eContract_500>]
+Commission this month: 255000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 255000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú  - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>, <UserContract: Nhật - eContract_500>]
+Commission this month: 255000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 255000.00, KPI Percentage: 100%, Status: completed
+Internal Server Error: /salary-history/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 506, in salary_history
+    return render(request, 'salary_history.html', context)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+        (
+    ...<2 lines>...
+        )
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 489, in parse
+    raise self.error(token, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'intcomma'
+Internal Server Error: /salary-history/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 506, in salary_history
+    return render(request, 'salary_history.html', context)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+        (
+    ...<2 lines>...
+        )
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 489, in parse
+    raise self.error(token, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'intcomma'
+Internal Server Error: /salary-history/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 506, in salary_history
+    return render(request, 'salary_history.html', context)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+        (
+    ...<2 lines>...
+        )
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 489, in parse
+    raise self.error(token, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'intcomma'
+Internal Server Error: /salary-history/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Users/xuannhat/m_staff 2 /user/views.py", line 506, in salary_history
+    return render(request, 'salary_history.html', context)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+        (
+    ...<2 lines>...
+        )
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 489, in parse
+    raise self.error(token, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/template/base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'intcomma'
+/Users/xuannhat/m_staff 2 /user/views.py changed, reloading.
+Watching for file changes with StatReloader
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú  - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>, <UserContract: Nhật - eContract_500>]
+Commission this month: 255000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 255000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Lê Tú  - Loa thần tài>, <UserContract: Tú ne - Loa thần tài>, <UserContract: đông - Loa thần tài>, <UserContract: nhàn - eContract_200>, <UserContract: Nhật - eContract_500>]
+Commission this month: 255000.00
+Current Plan: Plan for None (2025-05-01 to 2025-05-31)
+KPI Target: 70000, KPI Achieved: 255000.00, KPI Percentage: 100%, Status: completed
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: []
+Commission this month: 0
+Current Plan: Plan for NV003 (2025-05-01 to 2025-05-31)
+KPI Target: 500000, KPI Achieved: 0, KPI Percentage: 0.0%, Status: in_progress
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: []
+Commission this month: 0
+Current Plan: Plan for NV003 (2025-05-01 to 2025-05-31)
+KPI Target: 500000, KPI Achieved: 0, KPI Percentage: 0.0%, Status: in_progress
+POST data: <QueryDict: {'csrfmiddlewaretoken': ['VkrpZJmCwoZRSd0YieOwePH30Bh0ge9oeKGdU2fzWZZERWdSwkLq2ddbPNy9pHY9'], 'contract': ['5'], 'created_contract_id': [''], 'action': ['create'], 'customer_name': ['Nhật'], 'customer_phone': ['0947338284']}>
+Created contract eContract_500 for employee NV003
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Nhật - eContract_500>]
+Commission this month: 120000.00
+Current Plan: Plan for NV003 (2025-05-01 to 2025-05-31)
+KPI Target: 500000, KPI Achieved: 120000.00, KPI Percentage: 24.00%, Status: in_progress
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Nhật - eContract_500>]
+Commission this month: 120000.00
+Current Plan: Plan for NV003 (2025-05-01 to 2025-05-31)
+KPI Target: 500000, KPI Achieved: 120000.00, KPI Percentage: 24.00%, Status: in_progress
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Nhật - eContract_500>]
+Commission this month: 120000.00
+Current Plan: Plan for NV003 (2025-05-01 to 2025-05-31)
+KPI Target: 500000, KPI Achieved: 120000.00, KPI Percentage: 24.00%, Status: in_progress
+Viewing details for contract eContract_500 (ID: 5)
+Found 3 user contracts
+Contracts: [<Contract: Contract - Loa thần tài>, <Contract: Contract - eContract_200>, <Contract: Contract - eContract_500>]
+Created Contracts: [<UserContract: Nhật - eContract_500>]
+Commission this month: 120000.00
+Current Plan: Plan for NV003 (2025-05-01 to 2025-05-31)
+KPI Target: 500000, KPI Achieved: 120000.00, KPI Percentage: 24.00%, Status: in_progress

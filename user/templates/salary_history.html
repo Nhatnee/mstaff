@@ -103,6 +103,7 @@
           <th>Tháng</th>
           <th>Lương cơ bản</th>
           <th>Hoa hồng</th>
+          
           <th>Tổng thu nhập</th>
         </tr>
       </thead>
@@ -113,6 +114,7 @@
             <td>{{ data.month }}</td>
             <td>{{ data.salary|intcomma }} VNĐ</td>
             <td>{{ data.commission|intcomma }} VNĐ</td>
+            
             <td class="total">{{ data.total|intcomma }} VNĐ</td>
           </tr>
         {% endfor %}

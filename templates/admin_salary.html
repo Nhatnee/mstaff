@@ -46,6 +46,13 @@
         h2 {
             font-weight: bold;
         }
+
+        .filter-form {
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
@@ -72,7 +79,28 @@
 
 <!-- Main Content -->
 <div class="container mt-5">
-    <h2 class="mb-4 text-center">Bảng Lương Nhân viên</h2>
+    <h2 class="mb-4 text-center">Bảng Lương Nhân viên - Tháng {{ selected_month }}/{{ selected_year }}</h2>
+
+    <!-- Form chọn tháng và năm -->
+    <form method="GET" class="filter-form">
+        <div>
+            <label for="month">Tháng:</label>
+            <select name="month" id="month">
+                {% for month in months %}
+                    <option value="{{ month }}" {% if month == selected_month %}selected{% endif %}>Tháng {{ month }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="year">Năm:</label>
+            <select name="year" id="year">
+                {% for year in years %}
+                    <option value="{{ year }}" {% if year == selected_year %}selected{% endif %}>{{ year }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Lọc</button>
+    </form>
 
     <div class="card p-4">
         <div class="table-responsive">
@@ -83,6 +111,7 @@
                         <th>Phòng ban</th>
                         <th>Hệ số lương</th>
                         <th>Lương (VND)</th>
+                        <th>BHXH (VND)</th>
                         <th>Hoa hồng (VND)</th>
                         <th>Tổng lương (VND)</th>
                     </tr>
@@ -97,15 +126,18 @@
                                 {{ employee.get_salary|floatformat:0|intcomma }} VND
                             </td>
                             <td class="text-end pe-4">
-                                {{ employee.get_total_commission|floatformat:0|intcomma }} VND
+                                {{ employee.bhxh|floatformat:0|intcomma }} VND
                             </td>
                             <td class="text-end pe-4">
-                                {{ employee.get_total_salary|floatformat:0|intcomma }} VND
+                                {{ employee.total_commission|floatformat:0|intcomma }} VND
+                            </td>
+                            <td class="text-end pe-4">
+                                {{ employee.total_salary|floatformat:0|intcomma }} VND
                             </td>
                         </tr>
                     {% empty %}
                         <tr>
-                            <td colspan="6" class="text-center text-muted">Chưa có nhân viên nào.</td>
+                            <td colspan="7" class="text-center text-muted">Chưa có nhân viên nào.</td>
                         </tr>
                     {% endfor %}
                 
@@ -114,6 +146,9 @@
                             <td colspan="3" class="text-end">Tổng:</td>
                             <td class="text-end pe-4">
                                 {{ total_salary|floatformat:0|intcomma }} VND
+                            </td>
+                            <td class="text-end pe-4">
+                                {{ total_bhxh|floatformat:0|intcomma }} VND
                             </td>
                             <td class="text-end pe-4">
                                 {{ total_bonus|floatformat:0|intcomma }} VND

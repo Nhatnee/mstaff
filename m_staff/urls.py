@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('user.urls')),  # Chuyển hướng toàn bộ URL của user vào app user
     path('department', include('department.urls', )),
-    path('kpi/', include('kpi.urls')),
     path('announcements/', include('announcements.urls')),
+    path('contract/', include('contract.urls')),
 ]
 
