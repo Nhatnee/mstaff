@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-d(6%f16nek=$*fu(!+&2qf8g%i9@s0i!q01ly!+^d7$68atk-)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mstaff.onrender.com']
+ALLOWED_HOSTS = ['mstaff1.onrender.com']
 
 # ALLOWED_HOSTS = []
 # Application definition
@@ -89,10 +89,10 @@ WSGI_APPLICATION = 'm_staff.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mstaff',
-        'USER': 'mstaff_user',
-        'PASSWORD': 'ZjB1l047RjW057fj4LJeY30er250ZMRh',
-        'HOST': 'dpg-d094lhjipnbc73e114k0-a.singapore-postgres.render.com',
+        'NAME': 'm_staff1',
+        'USER': 'm_staff1_user',
+        'PASSWORD': 'bxaK32CqKMjw2WXoR0ytFpJIPqIBz8d1',
+        'HOST': 'dpg-d0pg3mje5dus73dpgemg-a',
         'PORT': '5432',
         'OPTIONS': {
             'sslmode': 'require',
