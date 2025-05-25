@@ -76,29 +76,29 @@ WSGI_APPLICATION = 'm_staff.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mstaff',
-        'USER': 'root',
-        'PASSWORD': '12345678',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    },
-}
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
+#         'ENGINE': 'django.db.backends.mysql',
 #         'NAME': 'mstaff',
-#         'USER': 'mstaff_user',
-#         'PASSWORD': 'ZjB1l047RjW057fj4LJeY30er250ZMRh',
-#         'HOST': 'dpg-d094lhjipnbc73e114k0-a.singapore-postgres.render.com',
-#         'PORT': '5432',
-#         'OPTIONS': {
-#             'sslmode': 'require',
-#         }
-#     }
+#         'USER': 'root',
+#         'PASSWORD': '12345678',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     },
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mstaff',
+        'USER': 'mstaff_user',
+        'PASSWORD': 'ZjB1l047RjW057fj4LJeY30er250ZMRh',
+        'HOST': 'dpg-d094lhjipnbc73e114k0-a.singapore-postgres.render.com',
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',
+        }
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
