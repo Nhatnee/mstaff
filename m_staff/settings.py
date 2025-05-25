@@ -92,7 +92,7 @@ DATABASES = {
         'NAME': 'm_staff1',
         'USER': 'm_staff1_user',
         'PASSWORD': 'bxaK32CqKMjw2WXoR0ytFpJIPqIBz8d1',
-        'HOST': 'dpg-d0pg3mje5dus73dpgemg-a',
+        'HOST': 'dpg-d0pg3mje5dus73dpgemg-a.singapore-postgres.render.com',
         'PORT': '5432',
         'OPTIONS': {
             'sslmode': 'require',
